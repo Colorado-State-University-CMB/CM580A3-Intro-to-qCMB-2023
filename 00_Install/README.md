@@ -24,6 +24,8 @@ https://desktop.github.com/ Should detect your necessary version. Click to downl
 
 You can log in with your account once you've downloaded the App.
 
+Windows users will need to install git. Download from https://git-scm.com/
+
 ### Cloning the course repository
 
 * Under Current Repository, click the down arrow -> Add -> Clone 
