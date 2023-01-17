@@ -1,14 +1,43 @@
-# Installation notebook
+# Setup Installation Basics
 
-Start a document. It can be a Word document. This will be your notebook for all the installation steps for the different requirements of the class.
+There are a few Apps that we want to have in hand as we get started. They are Github Desktop and R/RStudio.  As we use the command line, there will be other components to install and get working, but that will come later.
 
-First, record information about your OS, followed by the steps you take to install software. This notebook is critical if complications arise, but it's also handy to just have around.
+## Your username and password
 
-### Example Notebook
+I know this seems silly, but make sure you have your login username and password for your computer- you may already use it regularly to login. You'll need it to install things.  You may wish to write it down somewhere.
 
-[This is my notebook](/Module_0_Installation/R_install_notes.txt) for installing R and RStudio fresh on an MacOS Monterey laptop. It follows the steps below to about line 60.
+If you are able to install things already, then you're all set to go!
 
-You can read further to see how I troubleshoot other issues that we won't deal with right away.
+## Installing on Mac versus Windows
+
+Mac install files are disk images that end in the file extension ".dmg". Windows install files might end in ".exe" (I don't have Windows), but you may have to install through the Start Menu for the Windows "allowed" version.
+
+### R
+
+Current version is 4.2.2. I'm using 4.1.2. 
+
+If you already have R, but a previous version, it should work for most things but you can update using the same instructions as below. You may have to reinstall packages if you do this though.
+
+
+Go to: https://cran.rstudio.com/ 
+
+* Windows: 
+  * Click "Download R for Windows"
+  * You need "base" and "Rtools"
+  * Download the ".exe" file and click on it
+  
+* Mac:
+  * Click "Download R for Mac"
+  * You need to know if you have an Intel or Apple Silicon processor
+    * Click on the Apple symbol at the very top left of your screen. Choose "About this Mac"
+    * Under "Processor" look for the words "Intel" or "Apple Silicon." There will be other details but these words are the important ones.
+  * If you have intel: Download "R-4.2.2.pkg (notarized and signed" and click on it to install.
+  * If you have Apple Silicon: Download "R-4.2.2-arm64.pkg (notarized and signed)" and click on it to install.
+
+### RStudio
+
+https://posit.co/download/rstudio-desktop/#download
+
 
 ## 1. Accounts 
 
