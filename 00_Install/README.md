@@ -101,7 +101,7 @@ Download and install MiKTeX from http://miktex.org
 
 
 
-### Get ahead of things by installing a few R libraries
+## Get ahead of things by installing a few R libraries
 
 Record in your notes each packages name and whether it was sucessful, but there can be verbose output to sift through. Just be on the look out for ERRORS (tend to be red).
 
