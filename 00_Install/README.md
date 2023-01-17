@@ -12,7 +12,31 @@ If you are able to install things already, then you're all set to go!
 
 Mac install files are disk images that end in the file extension ".dmg". Windows install files might end in ".exe" (I don't have Windows), but you may have to install through the Start Menu for the Windows "allowed" version.
 
-### R
+## Github desktop to access course content
+
+### Github account
+
+It may go smoother if you have a github account. Sign up at github.com
+
+### Github Desktop Download
+
+https://desktop.github.com/ Should detect your necessary version. Click to download.
+
+You can log in with your account once you've downloaded the App.
+
+### Cloning the course repository
+
+* Under Current Repository, click the down arrow -> Add -> Clone 
+* Find the URL tab, and paste in https://github.com/Colorado-State-University-CMB/CM580A3-Intro-to-qCMB-2023.git
+* It will ask you where on your computer you want to put it, so have a place in mind for the coursework.
+* Click "clone" once you are done.
+* You will see the files in the right pane when the repository is loaded/selected. You can view them on your computer with 
+  * Mac: "Show in Finder"
+  * Windows: "Show in Explorer"
+
+We will go through an exercise on how to load and refresh course content.
+
+## R
 
 Current version is 4.2.2. I'm using 4.1.2. 
 
@@ -35,14 +59,14 @@ Go to: https://cran.rstudio.com/
   * If you have Apple Silicon: Download "R-4.2.2-arm64.pkg (notarized and signed)" and click on it to install.
 
 
-### RStudio
+## RStudio
 
 https://posit.co/download/rstudio-desktop/#download
 
 * Windows installer ends with *.exe*
 * Mac installer ends with *.dmg*
 
-### Swirl
+## Swirl
 
 Swirl is a package that runs in RStudio to provide extra instruction. It is good to have this installed.
 
