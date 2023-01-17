@@ -1,5 +1,7 @@
 # CM580A3-Intro-to-qCMB-2023
 
+![Course Logo](images/ascii-art-example-dna-halfsize.png)
+
 # Course Description
 The course will provide an introduction to bioinformatics tools, analysis, and presentation through the use of R/RStudio and shell/command line. The course is tailored to graduate students in the Cell and Molecular Biology graduate program.  The course is divided into modules that will expose the student to a wide, but not comprehensive, range of bioinformatics topics focusing on practical proficiency with data.  Each module will be taught by a guest lecturer, providing reading material and data to be analyzed using the platforms above.
 
