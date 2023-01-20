@@ -78,7 +78,6 @@ Type the following into the console and hit return:
 ```r
 install.packages("swirl")
 ```
-In your notes, **record the output of this command**, or note if there isn't any.
 
 Check the installation by typing the following into the console and hitting return.
 ```r
@@ -100,10 +99,9 @@ This was very large when I downloaded it: 7GB!
 Download and install MiKTeX from http://miktex.org
 
 
-
 ## Get ahead of things by installing a few R libraries
 
-Record in your notes each packages name and whether it was sucessful, but there can be verbose output to sift through. Just be on the look out for ERRORS (tend to be red).
+Just be on the look out for ERRORS (tend to be red).
 
 ```r
 install.packages("tidyverse")
