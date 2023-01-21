@@ -6,7 +6,7 @@
 
 **Instructor:** Erin Osborne Nishimura, PhD
 
-**Dates:** Monday January 24, 2022 & Wednesday January 26, 2022
+**Dates:** Monday January 23, 2023 & Wednesday January 25, 2023
 
 ## Welcome to the first module of CM580A3 - Introduction to Quantitative Cell and Molecular Biology!
 
