@@ -59,7 +59,7 @@ January 23, 2023
   * 2000 - R 1.0.0 is released 
   * 2011 - R versions start getting funny nicknames. R 2.14.0 Great Pumpkin
   * 2010 - CRAN exceeds 10,000 published packages!
-  * 2021 - R's latest version is 4.1.2 Bird Hippie
+  * 2021 - R's latest version is 4.2.2 Innocent and Trusting
 
 R is now a large, diverse community of users and developers. Here is a picture from the 2018 New York R conference courtesy of R-Bloggers:
 
