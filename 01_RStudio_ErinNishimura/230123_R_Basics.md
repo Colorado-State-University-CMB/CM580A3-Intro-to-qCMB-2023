@@ -60,11 +60,11 @@ January 23, 2023
   * 2011 - R versions start getting funny nicknames. R 2.14.0 Great Pumpkin
   * 2010 - CRAN exceeds 10,000 published packages!
   * 2021 - R's latest version is 4.2.2 Innocent and Trusting
+  * [R-bloggers](https://www.r-bloggers.com/) - great for keeping up with new developments
 
 R is now a large, diverse community of users and developers. Here is a picture from the 2018 New York R conference courtesy of R-Bloggers:
 
 <img src="webContent/Conference-Panorama-crop.jpeg" width="900">
-
 
 >  “R changed my opinion of humanity to some extent, to see how people are really willing to freely give of themselves and produce something larger than themselves without any thought of personal glory. There’s a lot of work with no recognition.” - Ross Ihaka
 
@@ -211,7 +211,7 @@ for data analysis. See also ‘citation("pkgname")’ for citing R packages.
 _In addition to interacting with R directly on the console, we can also write each of our expressions into a document called a **script**. Doing this will save each line for future use, for posterity. As we write this script, we can send each line to R interactively, one-by-one. Once we are happy with each expression, we can save the script._
 
   * :arrow_right: Save your **Untitled1** document as a script. Go to **File** in the top menu bar. Select **Save**. 
-  * :arrow_right: Navigate or create an appropriate location for your script. Save your script as **220124_Module1_demo.R**.
+  * :arrow_right: Navigate or create an appropriate location for your script. Save your script as **230123_Module1_demo.R**.
 
 _Write lines of code in your script._
 
