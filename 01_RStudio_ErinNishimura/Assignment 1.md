@@ -1,6 +1,6 @@
 # Assignment 1
 
-**Due:** January 31, 2022
+**Due:** January 30, 2023
 
 **Instructions:** 
   * Please turn in the answers to this assignment as a .txt document. To create a .txt document in R, go to **New File**, then select **Text file**. You can use any other text editor if you like. Please do not use Mac's Text Edit application, though.
@@ -10,6 +10,26 @@
 -----
 
 ## QUESTION 1 (5 pts)
+
+Let's explore R-studio a little bit by learning about shortcut keys. Try the following and report what happens:
+
+A. What happens when you press **Alt+Shift+K** on a PC/Linux or **Option+Shift+K** on a Mac?
+
+B. What happens when you are working on the "Console" and you press the **up arrow**?
+
+C. What happens when you are working on the "Console" and you press **CTRL+L**?
+
+D. What shortcut key helps you escape out of an executed command on the "Console"? For example, try executing a sleep function. This puts R to sleep for 5 minutes. How would you wake up R early?
+
+```r
+Sys.sleep(5)
+```
+
+
+-----
+
+
+## QUESTION 2 (5 pts)
 
 We learned that vectors come in different classes depending on the data type they house. 
 
