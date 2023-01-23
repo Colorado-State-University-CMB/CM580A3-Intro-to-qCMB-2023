@@ -2,7 +2,7 @@
 
 # R Next Steps
 
-January 26, 2022
+January 25, 2023
 
 ## Lessons for today
 
