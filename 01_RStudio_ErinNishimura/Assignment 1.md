@@ -9,9 +9,9 @@
 
 -----
 
-## QUESTION 1 (5 pts)
+## QUESTION 1 (5 pts) - Students will learn how to interface with R and RStudio
 
-Let's explore R-studio a little bit by learning about shortcut keys. Try the following and report what happens:
+Let's explore R-studio a little bit by learning about shortcut keys. Try the following and report what happens: (answers in words, phrases, or short sentences)
 
 A. What happens when you press **Alt+Shift+K** on a PC/Linux or **Option+Shift+K** on a Mac?
 
@@ -19,7 +19,7 @@ B. What happens when you are working on the "Console" and you press the **up arr
 
 C. What happens when you are working on the "Console" and you press **CTRL+L**?
 
-D. What shortcut key helps you escape out of an executed command on the "Console"? For example, try executing a sleep function. This puts R to sleep for 5 minutes. How would you wake up R early?
+D. What shortcut key helps you escape out of an executed command on the "Console"? For example, try executing a sleep function. This puts R to sleep for 5 minutes. (in other words - What would you press to return to the prompt before 5 minutes is complete?)
 
 ```r
 Sys.sleep(5)
@@ -29,7 +29,7 @@ Sys.sleep(5)
 -----
 
 
-## QUESTION 2 (5 pts)
+## QUESTION 2 (5 pts) - Students will become familiar with a few basic R objects - vectors
 
 We learned that vectors come in different classes depending on the data type they house. 
 
@@ -49,7 +49,9 @@ B. If we merge these vectors together into super_vector by concatenating them to
 
 -----
 
-## QUESTION 3 (5 pts)
+## QUESTION 3 (5 pts) 
+ - Students will become familiar with a few basic R objects - data frames
+ - Students will execute a few basic R functions
 
 Heather has written some code to create a data frame with columns for "languages", "greetings", and "partings". Each line of her code except the last line has a bug, or error. Can you de-bug Heather's code? Re-write it so the final answer looks like so:
 
@@ -75,7 +77,9 @@ dictionary
 
 -----
 
-## QUESTION 3 (5 pts)
+## QUESTION 4 (5 pts) 
+ - Students will execute a few basic R functions
+ - Students will gain experience in basic plotting
 
 The following code uses a base R plotting function called **barplot**. 
 
@@ -98,7 +102,7 @@ E. Save your plot as a .pdf and turn it in.
 
 -----
 
-## QUESTION 4 (5 pts)
+## QUESTION 5 (5 pts)
 
 Let's practice importing some data. Here is a real supplementary dataset that my lab recently published for a manuscript. 
 
