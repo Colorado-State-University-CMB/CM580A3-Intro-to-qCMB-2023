@@ -90,6 +90,7 @@ dictionary
 -----
 
 ## QUESTION 4 (5 pts) 
+
 :white_check_mark: Students will become familiar with a few basic R objects - data frames
 
 :white_check_mark: Students will execute a few basic R functions
@@ -131,9 +132,23 @@ Let's practice importing some data. Here is a real supplementary dataset that my
 
 -----
 
-## QUESTION 5 (5 pts)
+## Bonus content
 
-A. Go to the [R Graph Gallery](https://www.r-graph-gallery.com/index.html). Choose a category of R plots that you would like to learn more about. Using the R Graph Gallery pages, wikipedia, and other internet resources, learn how these plots generate their data. In 2 - 3 sentences, describe the plots in the category you have chosen. Be sure to include what type of data work best in this plot, how the plot is generated (what is on which axis, how measurements are calculated, etc), and what the benefits are of this type of data visualization (for the reader/viewer). 
+:white_check_mark: Students are encouraged to cultivate their own personal curiosity in R, data science, and programming
 
-B. Next, read through some of the R code in the Gallery associated with each plot. You may not understand the R code itself, but just try. You will probably better understand the commenting codes. Answer the following: What functions are being used in this code? Are they part of the base R package or an add on package? If an add-on, what is the suggested add on package? You may need to google search some of this information.
+  - Go to the [R Graph Gallery](https://www.r-graph-gallery.com/index.html). Choose a category of R plots that you would like to learn more about. Using the R Graph Gallery pages, wikipedia, and other internet resources, learn how these plots generate their data. Think about which plots you might use in your own research. 
+
+  - Next, read through some of the R code in the Gallery associated with each plot. You may not understand the R code itself, but just try. You will probably better understand the commenting codes. 
+
+  - Some of the data for this course, I downloaded from [Our World In Data](https://ourworldindata.org/). Explore that resource. Click on **Articles By Topic** to activate a pull down menu to explore. You can download any dataset you want. 
+
+For example, if you go to [Internet access per country over time](https://ourworldindata.org/internet#internet-access), you can see different plots like so...
+
+<img src="webContent/Screen Shot 2023-01-23 at 6.00.02 AM.png" width="600">
+
+
+You can select the **Download** menu tab at the bottom, and download the full dataset as a .csv file. Try it! Explore the data you've obtained! 
+
+
+
 
