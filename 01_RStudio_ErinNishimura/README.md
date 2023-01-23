@@ -16,6 +16,7 @@ In this first module, we will explore the basics of R. What is R? R is a program
 ## Learning objectives for this module
 
   * Students and instructors are invited to **start fresh** with their own pre-conceived notions of programming, computation, and quantitation
+  * Students are encouraged to cultivate their own personal curiosity in R, data science, and programming
   * Students will learn how and why R is **useful in biological research**
   * Students will learn how to **interface** with R and RStudio
   * Students will become familiar with a few basic **R objects**
