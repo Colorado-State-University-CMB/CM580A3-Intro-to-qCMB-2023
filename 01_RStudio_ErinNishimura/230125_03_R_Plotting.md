@@ -15,8 +15,6 @@ January 25, 2023
 
  * [Base R cheat sheet](https://iqss.github.io/dss-workshops/R/Rintro/base-r-cheat-sheet.pdf)
  * [Basic lessons on R & R plotting](https://www.w3schools.com/r/r_graph_plot.asp)
- * [Tidyverse](https://www.r-graph-gallery.com/index.html)
- * [A ggplot2 Tutorial](https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/)
  * [The R Graph Gallery](https://www.r-graph-gallery.com/index.html)
  * [Learn more with swirl](https://swirlstats.com/)
 
@@ -24,6 +22,18 @@ January 25, 2023
 ----
 
 # Functions - the verbs of the R language
+
+For this lesson, let's start with our same vectors as before. If you don't have them in your environment already, load them like so...
+
+```r
+organism <- c("human", "mouse", "worm", "yeast", "maize")
+kingdom <- c("animalia", "animalia", "animalia", "fungi", "plantae")
+kingdom <- as.factor(kingdom)
+chromosomes <- c(23, 20, 5, 16, 10)
+haploid <- c(FALSE, FALSE, FALSE, TRUE, FALSE)
+model_systems <- data.frame(organism, chromosomes, kingdom, haploid)
+str(model_systems)
+```
 
 By now, you are already experienced in calling R functions. Here are some examples:
 
@@ -86,7 +96,7 @@ First, let's download a dataset to import.
 
 ❗**EXERCISE** Download a data file
 
-  * Go to [scottish_towns_wikipedia.txt](https://drive.google.com/file/d/12scoAC57ZsmUS82oXUb2qWFKcTHm9LVD/view?usp=sharing)
+  * Go to [US_COVID_Vacc_by_StateTerr.csv](https://github.com/Colorado-State-University-CMB/CM580A3-Intro-to-qCMB-2023/tree/main/01_RStudio_ErinNishimura/inputData)
   * ➡️ Open the page
   * ➡️ Download by selecting the down arrow icon in the top right corner
   * ➡️ Save the file to a directory on your computer that makes sense
