@@ -63,15 +63,7 @@ C. How would you force super\_vector into a numeric sub-class? *write the line o
 
 :white_check_mark: Students will execute a few basic R functions
 
-Heather has written some code to create a data frame with columns for "languages", "greetings", and "partings". Each line of her code except the last line has a bug, or error. Can you de-bug Heather's code? Re-write it so the final answer looks like so:
-
-```
-  languages greetings partings
-1   English     hello      bye
-2   Spanish      hola    adios
-3  Japanese      ohio     mata
-4    French   bonjour    salut
-```
+Heather has written some code to create a data frame with columns for "languages", "greetings", and "partings". Each line of her code except the last line has a bug, or error. Can you de-bug Heather's code? Submit the re-written code.
 
 
 ```
@@ -83,6 +75,16 @@ dictionary <- DataFrame(languages, _greetings_, partings)
 dimens(dictionary)
 dictionary
 
+```
+
+*Hint: The final line of code should give you the following output:*
+
+```
+  languages greetings partings
+1   English     hello      bye
+2   Spanish      hola    adios
+3  Japanese      ohio     mata
+4    French   bonjour    salut
 ```
 
 -----
