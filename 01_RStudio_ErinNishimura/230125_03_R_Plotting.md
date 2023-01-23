@@ -88,7 +88,7 @@ mean(chromosomes, trim = 0.2)
 <img src="webContent/WebContent_Powerpoint_functionGrammar.jpg" width="600">
 
 
-# Importing Data
+# Importing Data - Acquiring Data
 
 So far, we've created objects by assignment expressions that directly specify their values. Next, we'll learn how to **import** data into R through an special assignment expression.
 
@@ -96,14 +96,30 @@ First, let's download a dataset to import.
 
 ❗**EXERCISE** Download a data file
 
-  * Go to [US_COVID_Vacc_by_StateTerr.csv](https://github.com/Colorado-State-University-CMB/CM580A3-Intro-to-qCMB-2023/tree/main/01_RStudio_ErinNishimura/inputData)
-  * ➡️ Open the page
-  * ➡️ Download by selecting the down arrow icon in the top right corner
-  * ➡️ Save the file to a directory on your computer that makes sense
-  * ➡️ Ensure the file name saved is "scottish_towns_wikipedia.txt"
-  * Note - I just generated this file from [this wikipedia page](https://en.wikipedia.org/wiki/List_of_towns_and_cities_in_Scotland_by_population)
+  * Go to [inputData](https://github.com/Colorado-State-University-CMB/CM580A3-Intro-to-qCMB-2023/tree/main/01_RStudio_ErinNishimura/inputData)
+  * ➡️ Right-click on the file **US_COVID_Vacc_by_StateTerr.csv** and select **Save File As...* to save it
+  * ➡️ Save the file somewhere in your Documents directory/folder that makes sense. Consider making a sub-directory called "CMB580" to house it in. 
+  * ➡️ Ensure the file name saved is "US_COVID_Vacc_by_StateTerr.csv"
 
-To import the file into R, we first need to **set the working directory**. This will specify the directory where the file lives.
+# Importing Data - Setting the working directory
+
+To import the file into R, we first need to sync up where R **thinks** it is working on your computer with the folder that contains a document you want to import. This is a bit tricky and will require some knowledge of **paths**.
+
+**Paths** - a path describes the location of a folder or file on your computer. Because folders are nested on a computer, the path will start on the left with the "topmost" or "outer most" directory, and then progressively list different sub-directories. 
+
+In R, folder names are separated by a "/" character.
+
+To determine where R "thinks it is" on your computer, use the command `getwd()` for **get working directory**.
+
+```r
+getwd()
+```
+
+The output is listed as a path:
+
+<img src="img Screen Shot 2023-01-23 at 9.06.12 AM.png" width="600">
+
+
 
 ❗**EXERCISE** Set the working directory
 
@@ -113,11 +129,6 @@ To import the file into R, we first need to **set the working directory**. This 
   * ➡️ For posterity, copy and paste the command line that appears on the console that looks like `setwd(directory/directory/)` into your .R script for next time
 
 
-To determine where R "thinks it is" on your computer, use the command `getwd()` for **get working directory**.
-
-```r
-getwd()
-```
 
 ❗**EXERCISE** Import the data file.
 
