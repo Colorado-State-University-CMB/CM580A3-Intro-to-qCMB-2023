@@ -5,11 +5,16 @@
 **Instructions:** 
   * Please turn in the answers to this assignment as a .txt document. To create a .txt document in R, go to **New File**, then select **Text file**. You can use any other text editor if you like. Please do not use Mac's Text Edit application, though.
   * DO NOT include the questions in the document you turn in. Answers only!
+  * Answers will be graded for correctness, completeness, and how well the instructions are followed. 
   * TURN in your assignment on canvas
+  
+:white_check_mark: These are the learning objectives associated with each question
 
 -----
 
-## QUESTION 1 (5 pts) - Students will learn how to interface with R and RStudio
+## QUESTION 1 (5 pts) 
+
+:white_check_mark: Students will learn how to interface with R and RStudio
 
 Let's explore R-studio a little bit by learning about shortcut keys. Try the following and report what happens: (answers in words, phrases, or short sentences)
 
@@ -29,9 +34,12 @@ Sys.sleep(5)
 -----
 
 
-## QUESTION 2 (5 pts) - Students will become familiar with a few basic R objects - vectors
+## QUESTION 2 (5 pts) 
 
-We learned that vectors come in different classes depending on the data type they house. 
+:white_check_mark: Students will become familiar with a few basic R objects - vectors
+:white_check_mark: Students will execute a few basic R functions
+
+Answer in phrases or sentences. We learned that vectors come in different classes depending on the data type they house. 
 
 ```r
 users <- c("alvin", "viet", "leila")
@@ -46,12 +54,13 @@ super_vector <- c(users, logins)
 
 B. If we merge these vectors together into super_vector by concatenating them together, what is the class of super\_vector? Why do you think this happened?
 
+C. How would you force super\_vector into a numeric sub-class (write the line of code)? What happens (copy the output and write a sentence explanation)? 
 
 -----
 
 ## QUESTION 3 (5 pts) 
- - Students will become familiar with a few basic R objects - data frames
- - Students will execute a few basic R functions
+:white_check_mark: Students will become familiar with a few basic R objects - data frames
+:white_check_mark: Students will execute a few basic R functions
 
 Heather has written some code to create a data frame with columns for "languages", "greetings", and "partings". Each line of her code except the last line has a bug, or error. Can you de-bug Heather's code? Re-write it so the final answer looks like so:
 
@@ -78,8 +87,9 @@ dictionary
 -----
 
 ## QUESTION 4 (5 pts) 
- - Students will execute a few basic R functions
- - Students will gain experience in basic plotting
+:white_check_mark: Students will become familiar with a few basic R objects - data frames
+:white_check_mark: Students will execute a few basic R functions
+:white_check_mark: Students will gain experience in basic plotting
 
 The following code uses a base R plotting function called **barplot**. 
 
