@@ -109,24 +109,28 @@ To import the file into R, we first need to sync up where R **thinks** it is wor
 
 In R, folder names are separated by a "/" character.
 
-To determine where R "thinks it is" on your computer, use the command `getwd()` for **get working directory**.
+To determine where R "thinks it is" on your computer, use the command `getwd()` for **get working directory**. **directory** is a more computer science-y term for "folder".
 
 ```r
 getwd()
 ```
 
-The output is listed as a path:
+The output is listed as a path. Notice how the output to getwd() matches with the folder names at the bottom of the "Finder" window and with the different folder icons.
 
 <img src="webContent/Screen Shot 2023-01-23 at 9.06.12 AM.png" width="600">
 
+:heavy_exclamation_mark: MAC tip: If you don't see you path in the Finder, pull down the View menu and select Show Path Bar.
 
+:heavy_exclamation_mark: PC tip: If you don't see your path in the Explorer, follow [these directions](https://pureinfotech.com/show-full-path-file-explorer-windows-10/)
 
-❗**EXERCISE** Set the working directory
+❗**EXERCISE** Setting the working directory
+
+To import a file, we need to set the working directory (that is printed out in getwd) to match the directory where our file lives.
 
   * ➡️ Go to the **Files** Panel of RStudio.
-  * ➡️ Navigate to the location containing the downloaded dataset
+  * ➡️ Navigate to the location containing the downloaded dataset (may take some sleuthing)
   * ➡️ Change the working directory by going to the **Files Menu Banner**, selecting **More**, and selecting **Set As Working Directory**
-  * ➡️ For posterity, copy and paste the command line that appears on the console that looks like `setwd(directory/directory/)` into your .R script for next time
+  * ➡️ For posterity, copy and paste the command line that appears on the console that looks like `setwd(/directory/directory/)` into your .R script for next time
 
 
 
@@ -142,51 +146,34 @@ getwd()
 help(read.table)
 
 # Look at the data using read.table
-read.table("scottish_towns_wikipedia.txt", header = TRUE)
+read.table("US_COVID_Vacc_by_StateTerr.csv", header = TRUE, sep = ",")
 
 # Actually, I don't like those number row names
-read.table("scottish_towns_wikipedia.txt", header = TRUE, row.names = "Locality")
+read.table("US_COVID_Vacc_by_StateTerr.csv", header = TRUE, sep = ",", row.names = "location")
 
 # That only printed out the data from the file, it didn't capture it.
 # To capture the data, use an assignment expression:
-scottish_towns <- read.table("scottish_towns_wikipedia.txt", header = TRUE, row.names = "Locality")
+VaxByState <- read.table("US_COVID_Vacc_by_StateTerr.csv", header = TRUE, sep = ",", row.names = "location")
 ```
+
+:+1: Use help(read.table) to learn how you can also use read.csv or read.csv2 to upload comma separated content, also! There are many ways to do the same thing in R.
 
 ⚠️ **BEST PRACTICES** Exploratory Data Analysis
 
 ➡️ Look at what you have acquired and make sure everything looks good!
 
 ```r
-dim(scottish_town)
-str(scottish_towns)
-class(scottish_towns)
+dim(VaxByState)
+str(VaxByState)
+class(VaxByState)
 ```
 
 ## Cleaning, Wrangling, & Munging
 
 One thing you will discover is that it takes A LOT of time to make your data nice and neat and tidy. Getting everything set up perfectly so that a function will run on an object takes a lot of ground work. This ground work goes by many names, usually depending on how frustrated the user is. It's called either cleaning, wrangling, or munging data. 
 
-I had to clean up this data quite a bit to make the neat and tidy file you just imported. I removed footnotes. I made the Column Header "Council Area" one word instead of two. 
+I had to clean up this data quite a bit to make the neat and tidy file you just imported. I removed missing data. You'll need to remove any spaces out of headers. 
 
-Next, we have a little to do list here:
-
-  1. Let's remove the commas from the **Population** elements
-  2. Let's set the **Population** column to be a numeric vector
-  3. Let's set the **Status** and **CouncilArea** columns to be factor vectors
-
-To do this, we will employ a process called **reassignment** in which we re-write columns of data
-
-```r
-
-# Remove commas and set Population to numeric
-scottish_towns$Population <- as.numeric(gsub(",","",scottish_towns$Population))
-
-# Set Status and Council.area to factors 
-scottish_towns$Status <- as.factor(scottish_towns$Status)
-scottish_towns$Council.area <- as.factor(scottish_towns$Council.area)
-
-# What happened?
-str(scottish_towns)
 
 ```
 
@@ -206,14 +193,17 @@ The result looks like this:
 
 ❗ **EXERCISE: Basic R Plot
 
-➡️ Let's try it!
+➡️ Let's try it! Say we want to see whether there is a relationship between the overall vaccination rates and the booster rates for different states. From first principles, we would predict that states with overall high vaccination rates also likely had high booster rates and vice versa. However, there may be interesting places where the initial rates of vaccination were high, but then the population did not boost at high levels. It would be interesting to find those states/territories.
 
 ```r
-# We can use integer or numeric classes as input
-str(scottish_towns)
+# We can use integer or numeric or integer classes as input
+str(VaxByState)
+
+# Use colnames to see the options for data we have available:
+colnames(VaxByState)
 
 # We'll use these x-values...
-scottish_towns$Rank
+VaxByState$
 
 # ... and these y-values:
 scottish_towns$Population
