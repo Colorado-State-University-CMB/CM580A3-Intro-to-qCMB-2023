@@ -99,20 +99,7 @@ dictionary
 
 The following code uses a base R plotting function called **barplot**. 
 
-```r
- barplot(scottish_towns$Population[1:10], names.arg=row.names(scottish_towns)[1:10], las = 2)
- ```
-
-A. Using the help pages for barplot, learn about the option `horiz`. Hack the line of code above to set horiz to "TRUE". What is the new line of code?
-
-B. What does the option `horiz` control?
-
-C. Change the values for the option `las` to `0,1, 2, or 3`. Explain what changes in your plot as a result.
-
-D. What options would add a main title to your plot that says "Ten Most Populous Scottish Towns"? Write the full expression.
-
-E. Save your plot as a .pdf and turn it in.
-
+TBD
 
 
 
@@ -128,7 +115,8 @@ Let's practice importing some data. Here is a real supplementary dataset that my
   * Ensure your working directory is set properly
   * Import the dataset into R using `read.csv()` and save it as an object called `signal_to_noise`
   * Note - .csv stands for "comma separated value"
-  * What is the output of `str(signal_to_noise)`? Copy and paste it here as the answer to this question.
+  * What is the output of `str(signal_to_noise)`? **Copy and paste it here as the answer to this question.**
+  * If you were NOT able to get this to work, please explain what you tried, what is going wrong, and any output or error messages you are getting.
 
 -----
 
@@ -151,6 +139,6 @@ You can select the **Download** menu tab at the bottom, and download the full da
 
 <img src="webContent/Screen Shot 2023-01-23 at 6.00.16 AM.png" width="600">
 
-  3. Think of other places where you encounter text-based data arranged in tables? Start to notice these resources and strategize how you could download and access the data. 
+  3. Think of other places where you encounter text-based data arranged in tables? Start to notice these resources. They are all around us (wikipedia, supplemental materials). Start to strategize how you could download and access the data. 
 
 
