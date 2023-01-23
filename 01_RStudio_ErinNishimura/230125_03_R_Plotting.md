@@ -117,7 +117,7 @@ getwd()
 
 The output is listed as a path:
 
-<img src="Screen Shot 2023-01-23 at 9.06.12 AM.png" width="600">
+<img src="webContent/Screen Shot 2023-01-23 at 9.06.12 AM.png" width="600">
 
 
 
