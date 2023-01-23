@@ -137,8 +137,8 @@ Let's practice importing some data. Here is a real supplementary dataset that my
 :white_check_mark: Students are encouraged to cultivate their own personal curiosity in R, data science, and programming
 
   1. Go to the [R Graph Gallery](https://www.r-graph-gallery.com/index.html). Choose a category of R plots that you would like to learn more about. Using the R Graph Gallery pages, wikipedia, and other internet resources, learn how these plots generate their data. Think about which plots you might use in your own research. 
-
-  2. Next, read through some of the R code in the Gallery associated with each plot. You may not understand the R code itself, but just try. You will probably better understand the commenting codes. 
+  
+  Next, read through some of the R code in the Gallery associated with each plot. You may not understand the R code itself, but just try. You will probably better understand the commenting codes. 
 
   3. Some of the data for this course, I downloaded from [Our World In Data](https://ourworldindata.org/). Explore that resource. Click on **Articles By Topic** to activate a pull down menu to explore. You can download any dataset you want. 
 
@@ -151,6 +151,6 @@ You can select the **Download** menu tab at the bottom, and download the full da
 
 <img src="webContent/Screen Shot 2023-01-23 at 6.00.16 AM.png" width="600">
 
-
+  3. Think of other places where you encounter text-based data arranged in tables? Start to notice these resources and strategize how you could download and access the data. 
 
 
