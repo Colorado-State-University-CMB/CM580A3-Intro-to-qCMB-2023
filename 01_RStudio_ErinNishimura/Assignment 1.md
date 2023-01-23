@@ -44,32 +44,32 @@ A. What are the classes of each of these vectors?
 super_vector <- c(users, logins)
 ```
 
-B. If we merge these vectors together into super_vector, how do their classes change? 
-
-```r
-users+1
-logins+1
-super_vector+1
-mean(users)
-mean(logins)
-mean(super_vector)
-```
-
-C. If we try to add 1 to each vector, what happens? If we try to take the mean of each vector, what happens? Explain the results you obtain and why you think this is happening.
+B. If we merge these vectors together into super_vector by concatenating them together, what is the class of super\_vector? Why do you think this happened?
 
 
 -----
 
-## QUESTION 2 (5 pts)
+## QUESTION 3 (5 pts)
 
-Heather has written some code to create a data frame. Each line of her code has a bug, or error. Explain each error. 
+Heather has written some code to create a data frame with columns for "languages", "greetings", and "partings". Each line of her code except the last line has a bug, or error. Can you de-bug Heather's code? Re-write it so the final answer looks like so:
 
 ```
+  languages greetings partings
+1   English     hello      bye
+2   Spanish      hola    adios
+3  Japanese      ohio     mata
+4    French   bonjour    salut
+```
+
+
+```
+# Heather's code:
 languages <- ("English", "Spanish", "Japanese", "French")
 _greetings_ <- c("hello", "hola", "ohio", "bonjour")
 partings < c("bye", "adios", "mata", "salut")
 dictionary <- DataFrame(languages, _greetings_, partings)
-len(dictionary)
+dimens(dictionary)
+dictionary
 
 ```
 
