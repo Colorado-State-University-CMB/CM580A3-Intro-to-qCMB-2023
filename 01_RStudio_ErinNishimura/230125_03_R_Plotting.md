@@ -238,6 +238,9 @@ plot(VaxByState$people_vaccinated_per_hundred, VaxByState$total_boosters_per_hun
 text(vax_vector, boost_vector, rownames(VaxByState),col='darkblue', pos = 4, cex = 0.8)
 ```
 
+<img src="webContent/Screen Shot 2023-01-25 at 8.53.36 AM.png" width="500">
+
+
 
 # Ready to get fancy? 
 
