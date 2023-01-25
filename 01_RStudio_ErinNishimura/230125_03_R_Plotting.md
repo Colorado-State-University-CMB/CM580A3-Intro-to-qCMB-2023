@@ -129,6 +129,8 @@ The output is listed as a path. Notice how the output to getwd() matches with th
 
 :heavy_exclamation_mark: PC tip: If you don't see your path in the Explorer, follow [these directions](https://pureinfotech.com/show-full-path-file-explorer-windows-10/)
 
+
+
 ❗**EXERCISE** Setting the working directory
 
 To import a file, we need to set R's working directory to match the directory where our file lives.
@@ -138,9 +140,9 @@ To import a file, we need to set R's working directory to match the directory wh
   * ➡️ Change the working directory by going to the **Files Menu Banner**, selecting **More**, and selecting **Set As Working Directory**
   * ➡️ For posterity, copy and paste the command line that appears on the console that looks like `setwd(/directory/directory/)` into your .R script for next time
 
+# Importing Data - Reading
 
-
-❗**EXERCISE** Import the data file.
+❗**EXERCISE** Together, let's write the code to read the data file into R.
 
 We will use the command `read.table()` to import the dataset
 
@@ -161,12 +163,14 @@ read.table("US_COVID_Vacc_by_StateTerr.csv", sep = ",", header = TRUE, row.names
 # To capture the data, use an assignment expression:
 VaxByState <- read.table("US_COVID_Vacc_by_StateTerr.csv", sep = ",", header = TRUE, row.names = "location")
 
+:+1: Use help(read.table) to learn how you can also use read.csv or read.csv2 to upload comma separated content, also! There are many ways to do the same thing in R.
+
 
 ```
 
-:+1: Use help(read.table) to learn how you can also use read.csv or read.csv2 to upload comma separated content, also! There are many ways to do the same thing in R.
+# Importing Data - EDA (Exploratory Data Analysis)
 
-⚠️ **BEST PRACTICES** Exploratory Data Analysis
+⚠️ **BEST PRACTICES** It is a wise idea to inspect your data once you have read it into R.
 
 ➡️ Look at what you have acquired and make sure everything looks good!
 
@@ -178,15 +182,20 @@ class(VaxByState)
 
 ## Obtaining, Cleaning, Wrangling, & Munging
 
-I obtained the data from [Our World In Data](https://ourworldindata.org/). This is a great resource for worldwide statistics. I use this site because their data is clean. What do I mean by that?
+I obtained the data from [Our World In Data](https://ourworldindata.org/). This is a great resource for worldwide statistics. I use this site because their data is **clean**. What do I mean by that?
 
   * headers don't contain spaces
   * no blank fields. Missing fields are labeled "NA"
   * no weird characters
 
-One thing you will discover is that most datasets are NOT clean. It takes A LOT of ground work to make your data nice and neat and tidy. This ground work goes by many names, usually depending on how frustrated the user is. It's called either **cleaning**, **wrangling**, or **munging** data. 
+One thing you will discover is that most datasets are NOT clean. It takes A LOT of ground work to make your data nice and neat and tidy. This ground work is called either **cleaning**, **wrangling**, or **munging** data, depending on your frustration level. 
 
-I had to clean up this data quite a bit to make the neat and tidy file you just imported. I filtered for the most recent dates, removed superfluous columns, and re-arranged the columns. I also removed data for US federal prisons, Defense Dept., and Veteran's hospitals because some of their data was missing.
+I had to clean up this data quite a bit to make the neat and tidy file you just imported.
+ 
+  * filtered for the most recent dates
+  * removed superfluous columns
+  * re-arranged the columns
+  * removed data for US federal prisons, Defense Dept., and Veteran's hospitals because some of their data was missing.
 
 
 
