@@ -162,7 +162,8 @@ barplot(ordered_Data_Frame$people_fully_vaccinated_per_hundred,
         names.arg=row.names(ordered_Data_Frame),
         horiz = TRUE, 
         las=2,
-        col = "cadetblue")
+        col = "cadetblue",
+        cex.names = 0.5)
 ```
 
 A. Using the help pages for barplot, learn about the option `horiz`. What does it do? Hack the above code and make horiz = FALSE. What happens?
