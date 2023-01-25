@@ -233,10 +233,17 @@ VaxByState$total_boosters_per_hundred
 # Plot
 plot(VaxByState$people_vaccinated_per_hundred, VaxByState$total_boosters_per_hundred)
 
-# Let's add color
-plot(scottish_towns$Rank, scottish_towns$Population, col = scottish_towns$Status)
+# Let's add some labels
+plot(VaxByState$people_vaccinated_per_hundred, VaxByState$total_boosters_per_hundred)
+text(vax_vector, boost_vector, rownames(VaxByState),col='darkblue', pos = 4, cex = 0.8)
+```
 
-# ready to get fancy? 
+
+# Ready to get fancy? 
+
+The following is just a demonstration of what you can do to add some details to the plot function. 
+
+```r
 # this is just a demonstration
 plot(vax_vector,
      boost_vector,
