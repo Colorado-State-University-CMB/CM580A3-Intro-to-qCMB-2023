@@ -1,4 +1,4 @@
-# Packages
+# Part 4 - Bonus Content - Installing Packages
 
 When it comes to graphics, the base R plot is going to start to feel very limiting fairly quickly. For example, it is a real pain to change the numeric formatting of the population from scientific notation to plain ol' 100,000 notation. This gets frustrating. Packages specifically designed to make plotting easy, organized, and beautiful will keep you from going crazy. 
 
