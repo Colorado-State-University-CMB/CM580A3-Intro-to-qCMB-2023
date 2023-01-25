@@ -263,6 +263,7 @@ lowess(boost_vector ~ vax_vector)
 lines(lowess(boost_vector ~ vax_vector), col = "purple")
 text(115,78, "local fit", col = "purple")
 ```
+<img src="webContent/Screen Shot 2023-01-25 at 8.45.09 AM.png" width="600">
 
 ## Saving plots
 
