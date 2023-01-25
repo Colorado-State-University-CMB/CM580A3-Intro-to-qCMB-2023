@@ -176,16 +176,21 @@ str(VaxByState)
 class(VaxByState)
 ```
 
-## Cleaning, Wrangling, & Munging
+## Obtaining, Cleaning, Wrangling, & Munging
 
-One thing you will discover is that it takes A LOT of time to make your data nice and neat and tidy. Getting everything set up perfectly so that a function will run on an object takes a lot of ground work. This ground work goes by many names, usually depending on how frustrated the user is. It's called either cleaning, wrangling, or munging data. 
+I obtained the data from [Our World In Data](https://ourworldindata.org/). This is a great resource for worldwide statistics. I use this site because their data is clean. What do I mean by that?
 
-I had to clean up this data quite a bit to make the neat and tidy file you just imported. I removed missing data. You'll need to remove any spaces out of headers. 
+  * headers don't contain spaces
+  * no blank fields. Missing fields are labeled "NA"
+  * no weird characters
+
+One thing you will discover is that most datasets are NOT clean. It takes A LOT of ground work to make your data nice and neat and tidy. This ground work goes by many names, usually depending on how frustrated the user is. It's called either **cleaning**, **wrangling**, or **munging** data. 
+
+I had to clean up this data quite a bit to make the neat and tidy file you just imported. I filtered for the most recent dates, removed superfluous columns, and re-arranged the columns. I also removed data for US federal prisons, Defense Dept., and Veteran's hospitals because some of their data was missing.
 
 
-```
 
-# Plotting
+## Plotting
 
   * Plotting and graphics are really what make R special. R graphics can handle a large amount of data and packages extend base R into capabilities that are very impressive.
   * [The R Graph Gallery](https://www.r-graph-gallery.com/index.html) has some impressive examples.
