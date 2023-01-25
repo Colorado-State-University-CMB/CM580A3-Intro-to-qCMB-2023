@@ -90,6 +90,29 @@ dictionary
 -----
 
 ## QUESTION 4 (5 pts) 
+:white_check_mark: Students will become familiar with a few basic R objects - data frames
+
+:white_check_mark: Students will execute a few basic R functions
+
+Write a set of expressions that would allow you to construct the following data frame object below?
+
+```
+  geneName tissue partings
+1   elt-2           bye
+2   ges-1      hola    adios
+3	chs-1     mata
+4	aes-3   bonjour    salut
+```
+
+
+
+Turn in the code. 
+
+-----
+
+
+
+## QUESTION 4 (5 pts) 
 
 :white_check_mark: Students will become familiar with a few basic R objects - data frames
 
