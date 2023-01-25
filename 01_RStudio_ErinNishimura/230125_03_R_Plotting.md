@@ -1,6 +1,6 @@
 
 
-# R Next Steps
+# Part 3 - Functions, Import/Export, & Plotting
 
 January 25, 2023
 
@@ -11,6 +11,12 @@ January 25, 2023
   * [Plotting](#plotting)
   * [Packages](#Packages)
 
+## Learning Goals
+
+  * Students will execute a few basic R functions
+  * Students will learn to import and export data
+  * Students will gain experience in basic plotting
+  
 ## Useful references
 
  * [Base R cheat sheet](https://iqss.github.io/dss-workshops/R/Rintro/base-r-cheat-sheet.pdf)
