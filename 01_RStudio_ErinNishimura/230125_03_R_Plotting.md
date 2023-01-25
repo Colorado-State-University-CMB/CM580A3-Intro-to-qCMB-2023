@@ -24,7 +24,7 @@ January 25, 2023
  * [The R Graph Gallery](https://www.r-graph-gallery.com/index.html)
  * [Learn more with swirl](https://swirlstats.com/)
 
-
+	
 ----
 
 # Functions - the verbs of the R language
@@ -102,10 +102,10 @@ First, let's download a dataset to import.
 
 ❗**EXERCISE** Download a data file
 
-  * Go to [inputData](https://github.com/Colorado-State-University-CMB/CM580A3-Intro-to-qCMB-2023/tree/main/01_RStudio_ErinNishimura/inputData)
-  * ➡️ Right-click on the file **US_COVID_Vacc_by_StateTerr.csv** and select **Save File As...* to save it
-  * ➡️ Save the file somewhere in your Documents directory/folder that makes sense. Consider making a sub-directory called "CMB580" to house it in. 
-  * ➡️ Ensure the file name saved is "US_COVID_Vacc_by_StateTerr.csv"
+  * Go to [US_COVID_Vacc_by_StateTerr.csv](https://drive.google.com/file/d/1_0z0Bi3cg5GjWpz6FV23NMFw8V0kzQm_/view?usp=sharing)
+  * ➡️ Download the file by clicking the down arrow in the top right set of icons.
+  * ➡️ Save the file somewhere in your Documents directory/folder that makes sense. Consider adding it to your folder called "CMB580" that contains this code. 
+  * ➡️ Ensure the file name saved is "US_COVID_Vacc_by_StateTerr.csv" by viewing it in Finder or explorer.
 
 # Importing Data - Setting the working directory
 
