@@ -225,32 +225,43 @@ str(VaxByState)
 colnames(VaxByState)
 
 # We'll use these x-values...
-VaxByState$
+VaxByState$people_vaccinated_per_hundred
 
 # ... and these y-values:
-scottish_towns$Population
+VaxByState$total_boosters_per_hundred
 
 # Plot
-plot(scottish_towns$Rank, scottish_towns$Population)
+plot(VaxByState$people_vaccinated_per_hundred, VaxByState$total_boosters_per_hundred)
 
 # Let's add color
 plot(scottish_towns$Rank, scottish_towns$Population, col = scottish_towns$Status)
 
 # ready to get fancy? 
 # this is just a demonstration
-par(mar = c(5.1, 6.1, 4.1, 2.1))
-plot(scottish_towns$Rank,
-     scottish_towns$Population,
-      col = scottish_towns$Status,
-      las = 1,
-      ylab = NA,
-      xlab = "Ranking by population",
-      pch = 19)
- mtext("Population", side=2, line=4) 
- text(scottish_towns$Rank[1:4], scottish_towns$Population[1:4], 
-      row.names(scottish_towns)[1:4], cex=0.6, pos=4, col="red", )
- legend(40, 600000, legend=c("City", "Town"),
-        col=c("black", "red"), pch = 19)
+plot(vax_vector,
+     boost_vector,
+     col = "lightblue",
+     pch = 19,
+     xlim = c(20,130),
+     ylim = c(20,130),
+     main = "Vaccination rates and boost rates per state or territory",
+     ylab = "Boosters administered per hundred people",
+     xlab = "Vaccinations administered per hundred people",
+     )
+
+# Label the states and territories
+text(vax_vector, boost_vector, rownames(VaxByState),col='darkblue', pos = 4, cex = 0.8)
+
+# Add a linear regression trendline
+lm(boost_vector ~ vax_vector)
+abline(lm(boost_vector ~ vax_vector ), col = "pink")
+text(120,95, "linear regression", col = "pink")
+
+
+# Fit the data using local smoothed fit (Lowess)
+lowess(boost_vector ~ vax_vector)
+lines(lowess(boost_vector ~ vax_vector), col = "purple")
+text(115,78, "local fit", col = "purple")
 ```
 
 ## Saving plots
