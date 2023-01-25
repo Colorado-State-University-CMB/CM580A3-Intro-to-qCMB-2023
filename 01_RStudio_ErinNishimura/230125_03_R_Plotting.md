@@ -267,15 +267,13 @@ text(115,78, "local fit", col = "purple")
 
 ## Saving plots
 
-To save a plot, we can simply use the **Export** menu item on the top of the Plots panel. You can export your plot as a .pdf and specify the width and height of the output image. You may need to play around. Sometimes, things can be buggy.
+To save a plot, we can simply use the **Export** menu item on the top of the Plots panel. You can export your plot as a .pdf...
 
-I used the following options:
+<img src="webContent/Screen Shot 2023-01-25 at 8.48.24 AM.png" width="500">
 
-<img src="webContent/Screen Shot 2022-01-26 at 8.39.17 AM.png" width="500">
+Specify the width and height of the output image. You may need to play around with these values until the plot looks nice...
 
-This generated the following plot:
-
-<img src="webContent/ScottishTownsPlot.jpg" width="500">
+<img src="Screen Shot 2023-01-25 at 8.48.40 AM.png" width="500">
 
 # Packages
 
