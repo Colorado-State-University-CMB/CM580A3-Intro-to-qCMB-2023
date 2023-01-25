@@ -116,23 +116,6 @@ Turn in your code including lines with comments.
 -----
 
 
-
-## QUESTION 4 (5 pts) 
-
-:white_check_mark: Students will become familiar with a few basic R objects - data frames
-
-:white_check_mark: Students will execute a few basic R functions
-
-:white_check_mark: Students will gain experience in basic plotting
-
-The following code uses a base R plotting function called **barplot**. 
-
-TBD
-
-
-
------
-
 ## QUESTION 5 (5 pts)
 
 Let's practice importing some data. Here is a real supplementary dataset that my lab recently published for a manuscript. 
@@ -146,6 +129,54 @@ Let's practice importing some data. Here is a real supplementary dataset that my
   * What is the output of `str(signal_to_noise)`? **Copy and paste it here as the answer to this question.**
   * If you were NOT able to get this to work, please explain what you tried, what is going wrong, and any output or error messages you are getting.
 
+-----
+
+## BONUS QUESTION - 0 PTS - OPTIONAL
+
+:white_check_mark: Students will become familiar with a few basic R objects - data frames
+
+:white_check_mark: Students will execute a few basic R functions
+
+:white_check_mark: Students will gain experience in basic plotting
+
+There is a base plotting function called  **barplot**. 
+
+Use help(barplot) to explore the instructions for barplot
+
+```r
+help(barplot)
+ ```
+ 
+Here is a little script to make a nice barplot of the US state and territory vaccination data
+
+```r
+
+# Make a new data frame that is sorted by the number of people fully vaccinated
+ordered_Data_Frame <- VaxByState[order(VaxByState$people_fully_vaccinated_per_hundred,decreasing = FALSE),]
+
+# Change the plotting region so there is a wide left hand margin
+par(mar = c(5, 15, 4, 2))
+
+# Make a barplot
+barplot(ordered_Data_Frame$people_fully_vaccinated_per_hundred, 
+        names.arg=row.names(ordered_Data_Frame),
+        horiz = TRUE, 
+        las=2,
+        col = "cadetblue")
+```
+
+A. Using the help pages for barplot, learn about the option `horiz`. What does it do? Hack the above code and make horiz = FALSE. What happens?
+
+D. Change the values for the option `las` to `0,1,or 3`. Explain what changes in your plot as a result.
+
+D. What options would add an axis label in one direction that says "Share of people fully vaccinated" and in the other that says "State or Territory"? How would you add a main title?
+
+E. Try saving your plot as a .pdf
+
+
+
+
+-----
 -----
 
 ## Bonus content
