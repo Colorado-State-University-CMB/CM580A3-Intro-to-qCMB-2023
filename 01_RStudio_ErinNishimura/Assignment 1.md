@@ -94,19 +94,24 @@ dictionary
 
 :white_check_mark: Students will execute a few basic R functions
 
-Write a set of expressions that would allow you to construct the following data frame object below?
+Write a set of expressions that would allow you to construct the following data frame called "CSU_stats" below. 
 
 ```
-  geneName tissue partings
-1   elt-2           bye
-2   ges-1      hola    adios
-3	chs-1     mata
-4	aes-3   bonjour    salut
+> CSU_stats
+           Category Population
+1        Undergrads      23943
+2             Grads       4503
+3            Online       3538
+4 Faculty and Staff       7491
+5              Town     164000
+
+> str(CSU_stats)
+'data.frame':	5 obs. of  2 variables:
+ $ Category  : chr  "Undergrads" "Grads" "Online" "Faculty and Staff" ...
+ $ Population: num  23943 4503 3538 7491 164000
 ```
 
-
-
-Turn in the code. 
+Turn in your code including lines with comments. 
 
 -----
 
