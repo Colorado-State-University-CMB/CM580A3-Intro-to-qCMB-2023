@@ -2,5 +2,6 @@
 *.swp
 ~$*
 .Rproj.user
+.Rproj*
 .RHistory
 .Rhistory
