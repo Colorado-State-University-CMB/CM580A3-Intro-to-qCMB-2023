@@ -1,0 +1,516 @@
+---
+title: "CM580A3 - Intro qCMB - R Databases (Part 1)"
+author: "Jessica Hill"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = TRUE, warning = FALSE)
+```
+
+***
+
+### Quick Review
+
+> Everything in R is an object!
+
+> Basic data types in R:
+
+1. Logical (aka Boolean)
+    + Can only have two values. 
+    + For example: TRUE/FALSE, 0/1, Yes/No
+```{r}
+class(TRUE)
+```
+```{r}
+# Useful functions
+
+#class() - what kind of object is it (high-level)?
+#typeof() - what is the object’s data type (low-level)?
+#length() - how long is it? What about two dimensional objects?
+#attributes() - does it have any metadata?
+```
+
+2. Numeric 
+    + All real numbers.
+    + For example: 3, 3.4
+```{r}
+class(3)
+
+class(3.4)
+typeof(3.4) # is actually a double precision floating point value
+```
+
+3. Integers  
+    + Integers are a special kind of numeric data.
+    + For example: 1, 2, 3 
+```{r}
+class(3L)
+
+y <- 1:10
+class(y)
+```   
+  
+4. Complex
+    + Specify imaginary values in R. 
+    + The suffix i is used to specify the imaginary part. 
+    + For example:
+```{r}
+class(1+4i) 
+class(2i)
+```         
+  
+5. Character
+    + Specify character or string values in a variable. 
+    + A string is a set of characters. 
+    + You can use '' or "" to represent strings. "A" is a single character and "Apple" is a string
+    + For example: 
+```{r}
+class("some text")
+class("1")
+class('a')
+```            
+   
+6. Raw
+    + Specifies values as raw bytes. 
+    + The bytes are represented in hexadecimal. 
+    + For example: 
+```{r}
+raw_variable <- charToRaw("Welcome to Programiz in English")
+
+class(raw_variable)
+print(raw_variable)
+```
+
+[what is hexadecimal?](https://www.techtarget.com/whatis/definition/hexadecimal)
+
+> Basic data structures in R:
+   
+1. Vectors 
+    + 1-D list of the same data type.
+    + There are 6 types of atomic vectors: logical, integer, character, raw, double, and complex.
+    + For example: 
+```{r}
+organism <- c('human', 'mouse', 'worm', 'yest', 'maize')
+
+class(organism)
+print(organism)
+
+
+numbers <- c(1, 2, 3, 1, 2, 4)
+
+class(numbers)
+print(numbers)
+
+
+logical <- c(TRUE, FALSE, FALSE, TRUE)
+
+class(logical)
+print(logical)
+```
+
+2. Lists
+    + 1-D or 2-D list containing different types of data.
+    + For example: 
+```{r}         
+random <- list("human", 1, 3, TRUE, 'worm', c(1,2,3), c(TRUE, FALSE, TRUE))
+
+class(random)
+print(random)
+```     
+
+3. Matrices
+    + 2-D collection of elements of the same data type. 
+    + Usually contains numeric values in order to perform mathematical operations. 
+    + For example:
+```{r}
+mx <- matrix(
+c(1,2,3,4,5,6,7,8),
+nrow = 4,
+ncol = 2,
+byrow = TRUE)     
+
+class(mx)
+print(mx)
+``` 
+
+4. Array
+    + Is a vector with 1 or more dimensions.
+        + A 1-D array is really just a vector
+        + A 2-D array is really just a matrix
+    + Multi-dimensional data is stored in the form of an n-dimensional matrix.
+    + For example: 
+```{r}
+v1 <- c(1,2,3)
+v2 <- c(4,5,6,7,8,9)
+result <- array(c(v1,v2),dim = c(3,3,2))
+
+class(result)
+print(result)
+```     
+
+```{r}
+v1 <- c(1,2,3)
+v2 <- c(4,5,6,7,8,9)
+col.names <- c("Item","Serial","Size")
+row.names <- c("Server","Network","Firewall")
+matrix.names <- c("DataCenter EU","DataCenter US")
+result2 <- array(c(v1,v2),dim = c(3,3,2),dimnames = list(row.names,col.names,matrix.names))
+
+print(result2)
+```
+    
+5. Dataframe
+    + 2-D collection of elements of different data types. Is truly a special type of list where every element of the list has the same length. 
+    + Each column consists of the value of 1 variable.
+    + Each row consists of a value set from each column. 
+    + For example:
+```{r}
+data_df <- data.frame(id = letters[1:10], x = 1:10, y = 11:20)
+
+print(data_df)
+``` 
+```{r}
+# Useful data frame functions
+
+#head() - shows first 6 rows
+#tail() - shows last 6 rows
+#dim() - returns the dimensions of data frame (i.e. number of rows and number of columns)
+#nrow() - number of rows
+#ncol() - number of columns
+#str() - structure of data frame - name, type and preview of data in each column
+#names() or colnames() - both show the names attribute for a data frame
+#sapply(dataframe, class) - shows the class of each column in the data frame
+```
+
+6. Factor 
+    + Are data objects that are used in order to categorize and store data as levels.
+    + They can be strings or integers. 
+    + For example:
+```{r}
+gender <- factor(c("female", "female", "male", "female", "male")) 
+
+class(gender)
+levels(gender) # you can check how many or what levels a factor variable has 
+```   
+    
+***
+
+### Importing/Exporting date in R
+
+> Considerations
+
+Before importing data into R, we need to check how our data is formatted.
+
+* Does your data file have row and column names? 
+    + If not, consider adding them. 
+    + If so, are they using good or bad naming conventions? 
+        
+```
+# Helpful tips
+
+- Avoid names with blank spaces. 
+    Good column names: Long_jump or Long.jump
+    Bad column name: Long jump
+
+- Avoid names with special symbols: ?, $, *, +, #, (, ), -, /, }, {, |, >, <
+    Only underscore can be used.
+
+- Avoid beginning variable names with a number. Use letter instead. 
+    Good column names: sport_100m or x100m 
+    Bad column name: 100m
+
+- Each variable has its own column. Each row is an observation.
+    All data in a column has the same type (e.g. it is all numerical data, or it is all text data)
+
+- Column names must be unique and describe the variable contained within that column. Duplicated names are not allowed.
+
+- No blank columns or blank rows between data
+
+- R is case sensitive. This means that Name is different from Name or NAME.
+
+- Delete any comments in your file
+
+- Replace missing values by NA (for not available)
+
+- If you have a column containing date, use the four digit format. 
+    Good format: 01/01/2016 
+    Bad format: 01/01/16
+    
+- Data are consistent (e.g. if a binary variable can take values ‘Yes’ or ‘No’ then only these two values are allowed, with no alternatives such as ‘Y’ and ‘N’)
+```
+
+* Check out this resource on recognizing and resolving common spreadsheet formatting problems. 
+    + [Formatting Problems](https://datacarpentry.org/spreadsheet-ecology-lesson/02-common-mistakes/)
+
+```
+# Key take aways from the above resource
+
+- Avoid using multiple tables within one spreadsheet.
+- Avoid spreading data across multiple tabs.
+- Record zeros as zeros. Dont leave them blank.
+- Use an appropriate null value to record missing data.
+- Don’t use formatting to convey information or to make your spreadsheet look pretty.
+- Place comments in a separate column.
+- Record units in column headers.
+- Include only one piece of information in a cell.
+- Avoid spaces, numbers and special characters in column headers.
+- Avoid special characters in your data.
+- Record metadata in a separate plain text file.
+```
+
+We also need to make sure that the data is saved in a file format that R can recognize. 
+
+* What type of file formats can R recognize?
+    + Quite a lot actually. 
+    + Here are some resources to check out below 
+        + [Import, Export, and Convert Data Files](https://cran.r-project.org/web/packages/rio/vignettes/rio.html)
+        + [R Data Import/Export](https://cran.r-project.org/doc/manuals/r-release/R-data.html) 
+
+* However, the file formats you will most likely work with are .csv, .tsv or .txt, .xlsx, JSON, Database, XML/HTML 
+
+> How can we import data into R? 
+
+* Many ways to import data into R, but usually we use a function that is somewhat specific to the file type we are trying to import. 
+
+* Lets check out some examples below: 
+
+Read in a .csv file, using 'read.csv'
+```{r}
+data1 <- read.csv('~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/heart_data.csv')
+head(data1, 5)
+```
+
+Now read in the same .csv file, but using 'read.table'
+```{r}
+data2 <- read.table('~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/heart_data.csv', sep=",", header = 1)
+head(data2, 5)
+```
+
+Read in a large zipped .csv file 
+```{r}
+file <- unz("~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/US_Accidents.csv.zip", "US_Accidents.csv")
+data3 <- read.table(file, header=TRUE, sep=",",nrow=10000)
+data3
+```
+
+Read in a .txt file, using 'read.delim' 
+```{r}
+data4 <- read.delim("~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/TulsaJun20_2020.txt",header = F)
+head(data4, 10)
+```
+
+Read in an Excel file
+```{r}
+install.packages("tidyverse") 
+library(readxl) 
+
+Data <- read_excel("~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/HNP_Stats.xlsx", sheet = 1)
+head(Data, 5)
+
+Country <- read_excel("~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/HNP_Stats.xlsx", sheet = 2)
+head(Country, 5)
+
+Series <- read_excel("~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/HNP_Stats.xlsx", sheet = 3)
+head(Series, 5)
+```
+
+Read in a JSON (JavaScript Object Notation) file
+```{r}
+install.packages("rjson")
+library(rjson)
+
+JsonData <- fromJSON(file = '~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/iris.json')
+print(JsonData[1:10])
+
+# to convert the JSON data into an R dataframe, use 'as.data.frame()' function in the data.table package
+install.packages("data.table") 
+library(data.table)
+
+data5 = as.data.frame(JsonData[1:5])
+data5
+```
+
+Import data from a Database using SQL
+```{r}
+install.packages("DBI")
+library(DBI)
+library(RSQLite)
+
+# load the database using dbConnect()
+conn <- dbConnect(RSQLite::SQLite(), "~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/basketball.sqlite")
+
+# display the names of the tables
+dbListTables(conn)
+
+# run a query and display the results, using the dbGetQuery() function. Just add a SQLite connection object and SQL query as a string.  
+print(dbGetQuery(conn, "SELECT * FROM player"))
+
+data6 = dbGetQuery(conn, "SELECT * FROM inactive_players")
+data6
+```
+
+Import data from XML files
+[XML Repository with example data](https://www.w3schools.com/xml/)
+```{r}
+install.packages("XML", "xml2")
+library(XML)
+library(xml2)
+
+breakfast_menue <- read_xml("https://www.w3schools.com/xml/simple.xml")
+
+breakfast_menue_parse <- xmlParse(breakfast_menue)
+breakfast_menue_parse
+
+breakfast_menue_nodes= getNodeSet(breakfast_menue_parse, "//food")
+breakfast_menue_nodes
+
+data7 <- xmlToDataFrame(nodes=breakfast_menue_nodes)
+head(data7)
+```
+
+Import data from HTML files
+```{r}
+install.packages("RCurl", "XML")
+library(RCurl)
+library(XML)
+
+url <- getURL("https://en.wikipedia.org/wiki/Brazil_national_football_team")
+tables <- readHTMLTable(url) # extract all HTML tables from the website
+data8 <- tables[23]
+data8$`NULL`
+print(data8)
+
+# OR
+
+install.packages("rvest")
+library(rvest)
+
+url <- "https://en.wikipedia.org/wiki/Brazil_national_football_team"
+file<-read_html(url)
+tables<-html_nodes(file, "table")
+data9 <- html_table(tables[25])
+View(data9)
+```
+
+Import binary data (i.e., an image)
+```{r}
+install.packages("tiff")
+library(tiff)
+brain <- readTIFF("~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/brain.tif")
+
+## set up the plot region:
+op <- par(bg = "thistle")
+plot(c(100, 250), c(300, 450), type = "n", xlab = "", ylab = "")
+image <- as.raster(brain)
+rasterImage(image, 100, 300, 250, 450, angle = 0, interpolate = FALSE)
+par(op)
+
+# OR
+
+install.packages("raster")
+install.packages("rgdal")
+install.packages("sp")
+library(raster)
+library(rgdal)
+library(sp)
+
+multiRasterB <- brick(paste0("~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/brain.tif"))
+plotRGB(multiRasterB,r=1,g=2,b=3, stretch="lin")
+```
+
+Also, check out these resources for more information and examples: 
+
+[R data import tutorial](https://www.datacamp.com/tutorial/r-data-import-tutorial)
+
+[Image raster data in R](https://www.neonscience.org/resources/learning-hub/tutorials/image-raster-data-r)
+
+> How can we export data from R?
+
+* There are a several ways to export data from R
+
+* Lets check out some examples below: 
+
+But first we need to read in some data
+```{r}
+install.packages("tidyverse")
+library(tidyverse)
+
+winequality_df <- read.csv("~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/winequality-red.csv", header = T)
+
+new_winequality_df <- winequality_df %>% filter(quality > 6)
+```
+
+Export a dataframe to a .txt file, using write.table 
+```{r}
+write.table(new_winequality_df, file = '~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/new_winequality_df.txt', col.names = TRUE,
+             row.names = FALSE, sep = "\t")
+```
+
+Export a dataframe to a .csv file, using write.table
+```{r}
+write.table(new_winequality_df, file = '~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/new_winequality_df.csv', col.names = TRUE,
+             row.names = FALSE, sep = ",")
+```
+
+Now export the same dataframe to a .csv file, using write.csv 
+```{r}
+write.csv(new_winequality_df, file = '~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/new_winequality_df2.csv', row.names = FALSE)
+```
+
+An alternative to write.table (is meant to be faster)
+```{r}
+install.packages("data.table")
+library(data.table)
+
+fwrite(new_winequality_df, file = '~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/new_winequality_df2.txt', sep = "\t")
+
+fwrite(new_winequality_df, file = '~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/new_winequality_df3.csv')
+```
+
+Another alternative to write.table
+```{r}
+library(readr)
+write_tsv(new_winequality_df, path = '~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/new_winequality_df3.txt')
+
+write_csv(new_winequality_df, path = '~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/new_winequality_df4.csv')
+```
+
+> Are all data file formats handled equally?
+
+Lets check the reading speeds of the different functions 
+```{r}
+# Use system.time() to time how fast R processes an expression. 
+# This function is especially useful for comparing the speed of two coding options.
+
+system.time(
+  read.csv("~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/winequality-red.csv", header = T)
+)
+```
+
+```{r}
+system.time(
+  read.table("~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/winequality-red.csv", header = T, sep = ",")
+)
+```
+
+```{r}
+system.time(
+  read.delim("~/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class/Example_Data/new_winequality_df.txt", header = T, sep = "\t")
+)
+```
+
+What about writing speeds? 
+
+* As a little home practice: 
+    + Check to see which functions write data files faster 
+    + Also see if particular file types write faster then others
+
+> What if we have a really large data file?
+
+* May run into R memory issues
+
+* Check out the below resource for some extra reading into this topic 
+    + [Out of memory strategies](https://bookdown.org/rdpeng/RProgDA/working-with-large-datasets.html)
+
