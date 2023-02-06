@@ -1,0 +1,239 @@
+---
+title: "Practice with Tidy Pipes and dataframes"
+author: "David C. King"
+date: "2023-02-01"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval=FALSE)
+library(tidyverse)
+```
+
+## Basic Piping with %>%
+
+Pipes simplify the successive use of functions and provide an intuitive left-to-right order.
+
+For example, here is the _mean_ of _differences_ between the first 8 numbers of the Fibonacci sequence.
+
+```{r fib-mean-diff, eval=TRUE}
+c(1,2,3,8,11) %>% diff() %>% mean()
+
+# The order of operations is left-to-right, whereas the conventional form of the expression is nested:
+
+mean(diff(c(1,2,3,8,11)))
+
+```
+
+### Breaking down by step
+
+Before we had pipes, it was often necessary to save the output of each step in order to make the left-to-right order easier to see.
+
+```{r, eval=TRUE}
+# step 1
+diffs = diff(c(1,2,3,8,11))
+diffs
+
+# step 2
+mean_of_diffs = mean(diffs)
+mean_of_diffs
+```
+
+
+### How it works
+
+To understand what's happening, look at simple use cases.
+
+`function(a)`
+
+is the same as
+
+`a %>% function()`
+
+------------------------------------------------------------------------
+
+If there is more than one argument to the function, the *additional* arguments are still listed in the function's parenthesis:
+
+`function(a,b)`
+
+is the same as
+
+`a %>% function(b)`
+
+and
+
+`function(a,b,c)`
+
+is the same as
+
+`a %>% function(b,c)`
+
+------------------------------------------------------------------------
+
+### Practice
+
+Practice with `sum()`
+
+```{r practice-pipe-sum}
+# write the pipe version of the following command:
+sum(1,2) # 3
+
+# pipe version: replace each '___' to make a valid statement. 
+#___ %>% ___(___)
+
+
+# To try your answer, delete the comment character in front of your pipe, and press the play button to execute this chunk. It should output '[1] 3' two times, once for each form of the statement.
+```
+
+Practice with `prod()`
+
+```{r practice-pipe-prod}
+# pipe version: replace each '___' to make a valid statement. 
+5 %>% prod(10) # 50
+
+# write the standard form of the previous command:
+#___(___,___) 
+
+
+#  To try your answer, delete the comment character in front of your new command, and press the play button to execute this chunk. It should output '[1] 50' two times, once for each form of the statement.
+```
+
+### Using vectors as values
+
+A more common usage of pipes (and R in general), is to perform actions on collections of numbers in various types of objects like vectors or dataframes.
+
+`vec = c(1,2,3)`
+
+`vec %>% mean()`
+
+Is the same as
+
+`mean(vec)`
+
+### Practice with vector variables
+
+------------------------------------------------------------------------
+
+```{r practice pipe with vector variables}
+x = c(1,1,2,3,5,8)
+
+# Take the mean of x: replace each '___' to make a valid statement. 
+#___ %>% ___()
+
+# write the non-pipe version of the previous command:
+#___(___) 
+
+
+# Take the standard deviation of x using the sd() function: replace each '___' to make a valid statement. 
+#___(___) 
+
+# Write the pipe version of the previous command:
+#___ %>% ___()
+
+
+# Delete the comment character in front of your new commands and press the play button to execute this whole chunk. 
+```
+
+### Apply functions to variables in pipe form
+
+1) Make some data and set it to x
+2) Write the pipe form of several summary functions on x
+3) Some summary functions: `mean`, `median`, `var`, `quantile`, `summary`
+
+*Note: not all of these functions return a single value.
+
+```{r from-scratch}
+# Give yourself some data to work with by setting x to a vector (as above).
+#x = ___
+
+# write the tidyverse pipe form of the summary functions:
+
+# x_mean = ...
+# x_median = ...
+# x_variance = ...
+# x_quantile = ...
+# x_summary = ...
+```
+
+### A note about assignment syntax
+
+There are three valid operators to assign values to variables.  The following are equivalent.
+
+1) `a = 3`
+
+2) `a <- 3`
+
+3) `3 -> a`
+
+`a` is `3`
+
+Different coders have different preferences, but the 3rd form in particular maintains the left-to-right order of operations in a pipe.
+
+```{r variable-assignment}
+
+x <- c(1,2,3,5,7,11,13,17) # some prime numbers
+x
+##### data %>% function() -> output
+
+x %>% diff() -> diff_x
+diff_x
+
+##### data %>% step1() %>% step2() -> output
+
+x %>% diff() %>% prod() -> product_of_prime_diffs
+product_of_prime_diffs
+```
+
+
+## Piping output through multiple functions.
+
+The __real__ benefit of piping is to apply functions in succession, as in the first example.
+
+`c(1,2,3,8,11) %>% diff() %>% mean()`
+
+`[1] 2.5`
+
+```{r}
+
+
+
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+## Dataset sources
+
+<https://www.openintro.org/book/statdata/>
+
+### Prostate
+
+```{r prostate-data}
+prostate = read.csv(url('https://www.openintro.org/book/statdata/exercise_prostate_cancer.csv'))
+
+prostate
+
+ggplot(prostate, aes(x=growth, fill=serum)) + geom_boxplot() + facet_wrap(~cell)
+```
+
+```{r summarize-prostate-columns}
+# group and summarize by categorical columns
+
+prostate_summary <- prostate %>% 
+  group_by(cell,serum) %>%
+  summarize(mean_growth=mean(growth), median_growth=median(growth))
+
+prostate_summary
+
+```
+
+```{r pivot-prostate-wider}
+prostate_summary %>%
+  spread(mean_growth)
+```
