@@ -238,24 +238,37 @@ df4 # prints df4 to console
 
 ```{r prostate-data}
 prostate = read.csv(url('https://www.openintro.org/book/statdata/exercise_prostate_cancer.csv'))
-
 prostate
-
-ggplot(prostate, aes(x=growth, fill=serum)) + geom_boxplot() + facet_wrap(~cell)
 ```
 
 ```{r summarize-prostate-columns}
-# group and summarize by categorical columns
-
+# No grouping
+# This is the same as taking the mean of the whole column "growth"
 prostate_summary <- prostate %>% 
-  group_by(cell,serum) %>%
-  summarize(mean_growth=mean(growth), median_growth=median(growth))
-
+summarize(mean_growth=mean(growth))
 prostate_summary
 
+# serum only
+# "after" serum seems to be associated with less growth
+prostate_summary <- prostate %>% 
+  group_by(serum) %>%
+  summarize(mean_growth=mean(growth))
+prostate_summary
+
+# cell type only
+# These values are close to each other, and to the overall mean
+prostate_summary <- prostate %>% 
+  group_by(cell) %>%
+  summarize(mean_growth=mean(growth))
+prostate_summary
+
+# cell type AND serum
+# Effect on growth may be different for different cell types
+prostate_summary <- prostate %>% 
+  group_by(serum,cell) %>%
+  summarize(mean_growth=mean(growth))
+
+prostate_summary %>% arrange(cell)
 ```
 
-```{r pivot-prostate-wider}
-prostate_summary %>%
-  spread(mean_growth)
-```
+
