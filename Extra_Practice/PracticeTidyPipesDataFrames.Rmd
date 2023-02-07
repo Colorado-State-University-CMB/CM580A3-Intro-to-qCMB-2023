@@ -274,19 +274,28 @@ prostate_summary <- prostate %>%
 prostate_summary %>% arrange(cell)
 ```
 
+Add more summary fields
+
+```{r add sd summary}
+prostate_summary <- prostate %>%
+  group_by(serum, cell) %>%
+  summarize(mean_growth=...,sd_growth=...)
+```
+
 ### If you're interested in the medical results
 Is there a difference in group means between serum before/after, interactions are 
-considered.
+considered. Doing an ANOVA testing for different group means of cell type and serum,
+yields an interesting result.
 
-```{r ANOVA, eval=FALSE}
-hsd = TukeyHSD(aov(growth ~ cell * serum, data=prostate))
-hsd
+Differences between serum before/after are statistically robust, but 
+immune vs. prostate cancer cells were not separate in magnitude
+(probably not interesting to the authors)
 
-# Differences between serum before/after are statistically robust, but 
-# immune vs. prostate cancer cells were not separate in magnitude
-# (probably not interesting to the authors)
-hsd$serum
-```
+
+## More practice with dataframes
+
+1. Show a step-at-a-time exploration of a data frame. 
+2. 
 
 ```{r}
 
