@@ -295,22 +295,39 @@ immune vs. prostate cancer cells were not separate in magnitude
 ## Practice with Kristin's DGE data
 
 
-```{r data}
+```{r simplified data}
 data <- read.delim("./DGE.tsv", sep="\t")[1:50,]
 gene_lengths <- read.delim("./gene_ids.tsv", sep="\t")[1:50,]
+
+# drop stat_rep columns
+data = data %>% select(-starts_with('stat'))
 ```
 
 ### Merging
 
 1) Show the non-tidy versions of merging data with gene_lengths.
 
-2) Show results of different parameters- all.x versus all.y
+2) Show results of different parameters- for example, all.x versus all.y
 
-3) Are there ways of comparing x not in y, y not in x.
+3) Are there ways of examining which of x are not in y, and vice versa?
+
+```{r merging}
+```
+
+### Mutate your way to the interesting data
+
+Can you break down the RPKM calculation into individual steps?
 
 ```{r}
 
+df = ... %>% mutate(KM=length/1000)
+# look at df
+df2 = ... %>% mutate(expo1_MMR = sum(data$expo_rep1) / 1000000) # rowwise() not needed?
+# look at df2
+
+df3 = ... %>% mutate(expo_RPKM_rep1 = expo_rep1 / KM / expo1_MMR ) # what happens without rowwise?
 
 ```
+
 
 
