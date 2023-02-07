@@ -230,11 +230,12 @@ df4 = df %>%
 df4 # prints df4 to console        
 ```
 
-## Dataset sources
+
+
+
+### Prostate cancer study
 
 <https://www.openintro.org/book/statdata/>
-
-### Prostate
 
 ```{r prostate-data}
 prostate = read.csv(url('https://www.openintro.org/book/statdata/exercise_prostate_cancer.csv'))
@@ -242,14 +243,15 @@ prostate
 ```
 
 ```{r summarize-prostate-columns}
-# No grouping
+# No grouping - overall mean of growth
 # This is the same as taking the mean of the whole column "growth"
 prostate_summary <- prostate %>% 
 summarize(mean_growth=mean(growth))
 prostate_summary
 
 # serum only
-# "after" serum seems to be associated with less growth
+# "after" serum seems to be associated with less growth, but this might obscure
+# differences between cell types
 prostate_summary <- prostate %>% 
   group_by(serum) %>%
   summarize(mean_growth=mean(growth))
@@ -263,7 +265,8 @@ prostate_summary <- prostate %>%
 prostate_summary
 
 # cell type AND serum
-# Effect on growth may be different for different cell types
+# Effect on growth has different numeric ranges, and 
+# may be different for different cell types
 prostate_summary <- prostate %>% 
   group_by(serum,cell) %>%
   summarize(mean_growth=mean(growth))
@@ -271,4 +274,21 @@ prostate_summary <- prostate %>%
 prostate_summary %>% arrange(cell)
 ```
 
+### If you're interested in the medical results
+Is there a difference in group means between serum before/after, interactions are 
+considered.
+
+```{r ANOVA, eval=FALSE}
+hsd = TukeyHSD(aov(growth ~ cell * serum, data=prostate))
+hsd
+
+# Differences between serum before/after are statistically robust, but 
+# immune vs. prostate cancer cells were not separate in magnitude
+# (probably not interesting to the authors)
+hsd$serum
+```
+
+```{r}
+
+```
 
