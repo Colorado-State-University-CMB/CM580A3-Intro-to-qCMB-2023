@@ -292,12 +292,25 @@ immune vs. prostate cancer cells were not separate in magnitude
 (probably not interesting to the authors)
 
 
-## More practice with dataframes
+## Practice with Kristin's DGE data
 
-1. Show a step-at-a-time exploration of a data frame. 
-2. 
+
+```{r data}
+data <- read.delim("./DGE.tsv", sep="\t")[1:50,]
+gene_lengths <- read.delim("./gene_ids.tsv", sep="\t")[1:50,]
+```
+
+### Merging
+
+1) Show the non-tidy versions of merging data with gene_lengths.
+
+2) Show results of different parameters- all.x versus all.y
+
+3) Are there ways of comparing x not in y, y not in x.
 
 ```{r}
 
+
 ```
+
 
