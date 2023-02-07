@@ -125,6 +125,7 @@ x = c(1,1,2,3,5,8)
 
 
 # Take the standard deviation of x using the sd() function: replace each '___' to make a valid statement. 
+# If you need help on using the sd() function, type ?sd in the console.
 #___(___) 
 
 # Write the pipe version of the previous command:
@@ -187,25 +188,46 @@ product_of_prime_diffs
 
 ## Piping output through multiple functions.
 
-The __real__ benefit of piping is to apply functions in succession, as in the first example.
+The __real__ benefit of piping is to apply functions one after another, as in the first example.
 
 `c(1,2,3,8,11) %>% diff() %>% mean()`
 
 `[1] 2.5`
 
+More complex data lends itself to more useful examples- pipes are great for building, modifying, and analyzing data frames.
+
 ```{r}
+# pretend RNA-seq data
+df = data.frame(gene_names = c("geneA", "geneB", "geneC"),
+           sampleA = c(0.3186023, 0.7902006, 0.4716855),
+           sampleB = c(0.3218933, 0.5404638, 0.9218390))
 
-
-
+df # print df to console
+```
+```{r}
+# add a column to indicate the fold change
+df %>% mutate(foldChange = sampleA/sampleB)
 ```
 
 ```{r}
+# save the result to a new data frame
+df2 = df %>% mutate(foldChange = sampleA/sampleB)
+df2 # prints df2 to console
 ```
 
 ```{r}
+# add a column called logFC that is the logarithm of foldChange
+df3 = df2 %>% mutate(...)
+df3 # prints df3 to console
 ```
 
 ```{r}
+# Combine the two mutate steps above into a single pipe and store it as df4.
+df4 = df %>% 
+  mutate(...) %>%
+  mutate(...) 
+
+df4 # prints df4 to console        
 ```
 
 ## Dataset sources
