@@ -16,6 +16,8 @@ cvt_wide.tsv
 
 gene_ids.tsv
 
+Also used: the R builtin Iris and ToothGrowth Datasets.
+
 ## Module 2 - Jess Hill
 
 basketball.sqlite 
