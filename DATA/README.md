@@ -16,3 +16,20 @@ cvt_wide.tsv
 
 gene_ids.tsv
 
+## Module 2 - Jess Hill
+
+basketball.sqlite 
+
+brain.tif 
+
+heart_data.csv 
+
+HNP_Stats.xlsx 
+
+iris.json 
+
+SraRunTable.txt 
+
+TulsaJun20_2020.txt 
+
+winequality-red.csv
