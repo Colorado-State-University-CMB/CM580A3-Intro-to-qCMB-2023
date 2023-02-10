@@ -201,7 +201,7 @@ Here, click on the SRA run file associated with this sample (SRR7609881).
 
 This will lead you to the SRA run browser for this sample. 
 
-Here, go ahead and download the FASTQ file for this sample. This may take some time as it is a large file. This file will go to your downloads directory. I have also provided the FASTQ file on **canvas**. Either way, once you have this file, place it into the **HW directory** that you will be working out of for this assignment (This way you dont have to change any paths)!
+Here, go ahead and download the FASTQ file for this sample. This may take some time as it is a large file. This file will go to your downloads directory. Once you have this file, place it into the **HW directory** that you will be working out of for this assignment (This way you dont have to change any paths)!
 
 ```{r}
 # Use the following code to install the required packages, load the required packages, and import the FASTQ file into R. 
