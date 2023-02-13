@@ -164,9 +164,9 @@ var(CRP, na.rm = T) # returns the variance
 sd(CRP, na.rm = T) # returns the standard deviation
 
 # Lets check out some basic plots
-plot(IL.6) # returns a scatter plot of our data
-hist(IL.6) # returns a histogram of our data
-boxplot(IL.6) # returns a boxplot of our data 
+plot(CRP) # returns a scatter plot of our data
+hist(CRP) # returns a histogram of our data
+boxplot(CRP) # returns a boxplot of our data 
 ```
 
 Now it is your turn. Repeat the above steps but this time with the IL.6 data! 
