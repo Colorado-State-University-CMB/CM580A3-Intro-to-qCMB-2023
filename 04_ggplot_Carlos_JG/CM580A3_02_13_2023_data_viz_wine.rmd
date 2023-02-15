@@ -1,0 +1,106 @@
+---
+title: "CM580A3: Plotting Wine Data with ggplot()"
+output: pdf_document
+---
+
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(knitr)
+
+```
+
+```{r, echo=F, message=F, warning=F}
+vid <- read_csv("US_COVID_Vacc_by_StateTerr.txt")
+
+wine <- read_csv("winequality-red.csv")
+```
+
+# Plot Two Continuous Variables Against Each Other Using Wine Data
+
+*******
+
+```{r, echo=F, message=F, warning=F}
+####
+#01#
+####
+wine %>%
+  rename(fixed_acidity = "fixed acidity", 
+         residual_sugar = "residual sugar") %>%
+  ggplot() +
+  geom_point(aes(x = fixed_acidity, y = residual_sugar, color = quality), 
+             alpha = .5) +
+  labs(x = "Fixed Acidity", y = "Residual Sugar", 
+       title = "Fixed Acidity vs. Residual Sugar") +
+  theme_bw() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+*******
+
+# Plot Wine Quality on the X-axis and Any Continuous Variable on the Y-axis
+
+*******
+
+## As a Scatter Plot
+
+```{r, echo=F, message=F, warning=F}
+####
+#02#
+####
+wine %>%
+  rename(free_sulfur_dioxide = "free sulfur dioxide") %>%
+  ggplot() +
+  geom_jitter(aes(x = as.factor(quality), y = free_sulfur_dioxide), 
+              width = .3, alpha = .5) +
+  labs(x = "Quality", y = "Free Sulfur Dioxide", 
+       title = "Quality vs. Free Sulfur Dioxide") +
+  theme_bw() +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+## As a Boxplot
+
+```{r, echo=F, message=F, warning=F}
+####
+#03#
+####
+wine %>%
+  rename(free_sulfur_dioxide = "free sulfur dioxide") %>%
+  ggplot() +
+  geom_boxplot(aes(x = as.factor(quality), y = free_sulfur_dioxide)) +
+  labs(x = "Quality", y = "Free Sulfur Dioxide", 
+       title = "Quality vs. Free Sulfur Dioxide") +
+  theme_bw() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+
+## As a Scatterplot and Boxplot
+
+```{r, echo=F, message=F, warning=F}
+####
+#04#
+####
+wine %>%
+  rename(free_sulfur_dioxide = "free sulfur dioxide") %>%
+  ggplot() +
+  geom_boxplot(aes(x = as.factor(quality), y = free_sulfur_dioxide), 
+               outlier.shape = NA) +
+  geom_jitter(aes(x = as.factor(quality), y = free_sulfur_dioxide), 
+              width = .2, alpha = .1) +
+  labs(x = "Quality", y = "Free Sulfur Dioxide", 
+       title = "Quality vs. Free Sulfur Dioxide") +
+  theme_bw() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+*******
+# Appendix
+
+```{r show-code, ref.label = all_labels(), echo = TRUE, eval = FALSE}
+
+```
