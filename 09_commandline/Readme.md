@@ -1,12 +1,19 @@
-Intro to command line
+# Intro to command line
+Who, what, where, when, when, why and how. 
 
- - What?
+ - **What?**
 Text interface to computer. 
- - Why?
+ - **Why?**
 Basic. 
- - How?
+ - **How?**
 I'll show you. 
- - When?
+ - **When?**
 Right now. (also, it existed before GUIs). 
- - Who? 
+ - **Who?**
 You: the biologist, analyzer of data, benefactor of open source. 
+ - **Where?**
+   - On Mac: search (cmd-space) for Terminal, or go to Applications/Utilities
+   -  On Windows: open your linux subsystem app.
+   -  Both: make a shortcut, leave in doc. Make it easy on yourself to find again.
+
+
