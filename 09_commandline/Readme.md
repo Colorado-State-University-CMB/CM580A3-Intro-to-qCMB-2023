@@ -10,7 +10,7 @@ I'll show you.
  - **When?**
 Right now. (also, it existed before GUIs). 
  - **Who?**
-You: the biologist, analyzer of data, benefactor of open source. 
+You: the biologist, analyzer of data, the user of open source. 
  - **Where?**
    - On Mac: search (cmd-space) for Terminal, or go to Applications/Utilities
    -  On Windows: open your linux subsystem app.
