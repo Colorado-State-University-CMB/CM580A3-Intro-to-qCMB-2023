@@ -2,13 +2,13 @@
 Who, what, where, when, when, why and how. 
 
  - **What?**
-Text interface to computer. 
+Text interface to computer. As opposed to a GUI. 
  - **Why?**
-Basic. 
+Basic. Versatile. Designed for automation. 
  - **How?**
 I'll show you. 
  - **When?**
-Right now. (also, it existed before GUIs). 
+Right now. (It existed before GUIs). 
  - **Who?**
 You: the biologist, analyzer of data, the user of open source. 
  - **Where?**
