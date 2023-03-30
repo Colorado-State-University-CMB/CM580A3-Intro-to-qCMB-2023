@@ -60,7 +60,7 @@ You cannot click in the middle of the line to edit!!!
 
 **Tab key** : autocomplete / show options
 
-Tab key behavior is different depending on what you have typed:
+### Tab key behavior is different depending on what you have typed:
  - nothing: asks to display all commands
  - part of a command: 
    - autocompletes command if only one match
