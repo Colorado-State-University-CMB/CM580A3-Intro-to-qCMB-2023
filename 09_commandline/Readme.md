@@ -35,6 +35,7 @@ The *shell* wraps around the *kernel*. Shell means interface, kernel means opera
  - runs programs 
  - navigate files
  - provide utilities for user (system info, internet, searching) 
+ - save preferences
 
 ### differences between shells. 
 
