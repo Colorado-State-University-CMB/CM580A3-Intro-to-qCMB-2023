@@ -1,3 +1,3 @@
 # Anatomy of the PROMPT
 
-`info$ ____space for typing commands___`
+![annotated screenshot of a few prompts](img/prompt.png)
