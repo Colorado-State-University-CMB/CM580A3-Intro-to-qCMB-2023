@@ -40,3 +40,37 @@ david@Cumbernauld /Users/david % echo $PWD
 /Users/david
 ```
 
+Try some invalid commands.
+
+```
+david@Cumbernauld /Users/david % abcdefg
+david@Cumbernauld /Users/david % ech $PWD
+```
+
+## Some keyboard shortcuts for the cursor
+
+You cannot click in the middle of the line to edit!!! 
+
+CTRL-A : move cursor to the beginning of the line
+CTRL-E : move cursor to the end of the line
+CTRL-W : delete a word at a time
+CTRL-C : cancel current command
+
+Up/down-arrow : scroll through command history
+Tab key : autocomplete / show options
+
+Tab key behavior is different depending on what you have typed:
+ - nothing: asks to display all commands
+ - part of a command: 
+   - autocompletes command if only one match
+   - possible matches to that command
+   - warning if no match
+ - argument after command: displays files in current directory
+ - partial argument after command:
+   - autocompletes file name if unique match
+   - possible matches to the file name
+   - warning if no match
+
+What it doesn't do:
+  - did you mean...?
+  - autocomplete/autosuggest non-file arguments
