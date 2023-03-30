@@ -73,3 +73,4 @@ Easy way to tell: Zsh prompt ends with `%`, bash prompt ends with `$`.
 [Markdown for Anatomy of prompt](ThePrompt.md)
 
 
+
