@@ -1,3 +1,4 @@
+*.ai
 .DS_Store
 *.swp
 ~$*
