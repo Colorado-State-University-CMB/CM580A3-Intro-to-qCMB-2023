@@ -28,22 +28,36 @@ You: the biologist, analyzer of data, the user of open source.
    - screen displays text (but scrollable) 
    - commands are typed out, submitted with enter key 
 
-### The "shell" 
+## The "shell" 
 
 The *shell* wraps around the *kernel*. Shell means interface, kernel means operating system. 
 
-Basic level:
+**Basic usage level**:
  - runs programs 
- - navigate files
+ - navigate/manipulate files
  - provide utilities for user (system info, internet, searching) 
- - configuration, preferences 
+ - configuration, preferences (includes variables, files)
 
-Next level:
+**Next level usage**:
   - install software (open source haven) 
   - create pipelines (natural progression of the shell "pipes") 
   - automate tasks (shell commands/pipelines in scripts) 
 
-### differences between shells. 
+### Syntax
+  - case-sensitive
+  - spaces (or lack thereof) important
+  - more abbreviations, symbols than R (limit typing)
+  
+** Compared to R: **
+  - commands work on files, not data structures stored in variables
+  - functions: no parentheses, spaces separate arguments
+    - R: `head(dataframe)`
+    - BASH: `head filename`
+    - R: `dataframe %>% head()`
+    - BASH: `cat filename | head`
+ 
+
+### Differences between shells. 
 
 Features provided through syntax
 
