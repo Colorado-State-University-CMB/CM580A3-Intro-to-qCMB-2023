@@ -51,13 +51,18 @@ The *shell* wraps around the *kernel*. Shell means interface, kernel means opera
   - spaces (or lack thereof) important
   - more abbreviations, symbols than R (limit typing)
   
-** Compared to R: **
+**Compared to R:**
   - commands work on files, not data structures stored in variables
   - functions: no parentheses, spaces separate arguments
     - R: `head(dataframe)`
     - BASH: `head filename`
     - R: `dataframe %>% head()`
     - BASH: `head < filename` or `cat filename | head`
+  - Shell *does* have variables: used for information, not *data*
+    - They are "dereferenced" with the '$': e.g. `$USER` specifies your user name.
+    - They have to be used in a command, like `echo $USER`. More on that later.
+    - They have to be set without any spaces: `a=5`
+    - By convention: *environmental variables* are in all caps.
  
 
 ### Differences between shells. 
