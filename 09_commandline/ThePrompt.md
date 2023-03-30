@@ -73,5 +73,5 @@ You cannot click in the middle of the line to edit!!!
    - warning if no match
 
 What it doesn't do:
-  - did you mean...?
+  - did you mean...? `ehco` instead of `echo`
   - autocomplete/autosuggest non-file arguments
