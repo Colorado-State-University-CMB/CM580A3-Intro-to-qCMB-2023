@@ -75,3 +75,11 @@ You cannot click in the middle of the line to edit!!!
 What it doesn't do:
   - did you mean...? `ehco` instead of `echo`
   - autocomplete/autosuggest non-file arguments
+
+# Task: practice keyboard shortcuts on commands
+
+Up-arrow to the commands above (echo, hostname, whoami, pwd) and execute them (hit enter). 
+
+Up-arrow again and modify them using the keyboard shortcuts.
+ - Pare down an echo command to "e" and hot tab to see what commands start with e
+ - Do the same with other commands. What do you get?
