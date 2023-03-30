@@ -47,7 +47,9 @@ david@Cumbernauld /Users/david % abcdefg
 david@Cumbernauld /Users/david % ech $PWD
 ```
 
-## Some keyboard shortcuts for the cursor
+## Some keyboard shortcuts for the cursor. Or use the <delete> key to delete one character at a time. 
+
+Use the left and right arrow keys to move the cursor
 
 You cannot click in the middle of the line to edit!!! 
 
