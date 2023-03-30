@@ -23,10 +23,13 @@ You: the biologist, analyzer of data, the user of open source.
    - mouse
    - screen draws windows
    - menus, pull down boxes, etc.
+   - visual program output is graphical
  - Command line:
    - keyboard 
    - screen displays text (but scrollable) 
    - commands are typed out, submitted with enter key 
+   - visual program output is text
+   - **can easily chain programs together **
 
 ## The "shell" 
 
