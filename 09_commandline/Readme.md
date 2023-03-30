@@ -40,7 +40,7 @@ The *shell* wraps around the *kernel*. Shell means interface, kernel means opera
 
 **Next level usage**:
   - install software (open source haven) 
-  - create pipelines (natural progression of the shell "pipes") 
+  - create pipelines (natural progression of the shell pipes/streams/redirection) 
   - automate tasks (shell commands/pipelines in scripts) 
 
 ### Syntax
@@ -54,10 +54,19 @@ The *shell* wraps around the *kernel*. Shell means interface, kernel means opera
     - R: `head(dataframe)`
     - BASH: `head filename`
     - R: `dataframe %>% head()`
-    - BASH: `cat filename | head`
+    - BASH: `head < filename` or `cat filename | head`
  
 
 ### Differences between shells. 
 
-Features provided through syntax
+Syntax details. Built-in features. [See accepted answer](https://apple.stackexchange.com/questions/361870/what-are-the-practical-differences-between-bash-and-zsh)
+
+Easy way to tell: Zsh prompt ends with `%`, bash prompt ends with `$`.
+
+---
+
+# Anatomy of the prompt
+
+[Markdown for Anatomy of prompt](ThePrompt.md)
+
 
