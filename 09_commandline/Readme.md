@@ -24,4 +24,19 @@ You: the biologist, analyzer of data, the user of open source.
    - screen draws windows
    - menus, pull down boxes, etc.
  - Command line:
-   - text and keyboard only
+   - keyboard 
+   - screen displays text (but scrollable) 
+   - commands are typed out, submitted with enter key 
+
+### The "shell" 
+
+The *shell* wraps around the *kernel*. Shell means interface, kernel means operating system. 
+
+ - runs programs 
+ - navigate files
+ - provide utilities for user (system info, internet, searching) 
+
+### differences between shells. 
+
+Features provided through syntax
+
