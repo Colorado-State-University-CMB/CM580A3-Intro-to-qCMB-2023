@@ -51,13 +51,13 @@ david@Cumbernauld /Users/david % ech $PWD
 
 You cannot click in the middle of the line to edit!!! 
 
-CTRL-A : move cursor to the beginning of the line
-CTRL-E : move cursor to the end of the line
-CTRL-W : delete a word at a time
-CTRL-C : cancel current command
+ - CTRL-A : move cursor to the beginning of the line
+ - CTRL-E : move cursor to the end of the line
+ - CTRL-W : delete a word at a time
+ - CTRL-C : cancel current command
 
-Up/down-arrow : scroll through command history
-Tab key : autocomplete / show options
+**Up/down-arrow** : scroll through command history
+**Tab key** : autocomplete / show options
 
 Tab key behavior is different depending on what you have typed:
  - nothing: asks to display all commands
