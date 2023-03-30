@@ -17,3 +17,11 @@ You: the biologist, analyzer of data, the user of open source.
    - Both: make a shortcut, leave in Dock. Make it easy on yourself to find again.
 
 
+## What
+
+ - GUI:
+   - mouse
+   - screen draws windows
+   - menus, pull down boxes, etc.
+ - Command line:
+   - text and keyboard only
