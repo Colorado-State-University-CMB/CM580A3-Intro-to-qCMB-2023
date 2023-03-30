@@ -32,10 +32,16 @@ You: the biologist, analyzer of data, the user of open source.
 
 The *shell* wraps around the *kernel*. Shell means interface, kernel means operating system. 
 
+Basic level:
  - runs programs 
  - navigate files
  - provide utilities for user (system info, internet, searching) 
- - save preferences
+ - configuration, preferences 
+
+Next level:
+  - install software (open source haven) 
+  - create pipelines (natural progression of the shell "pipes") 
+  - automate tasks (shell commands/pipelines in scripts) 
 
 ### differences between shells. 
 
