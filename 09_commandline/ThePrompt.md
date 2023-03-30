@@ -57,6 +57,7 @@ You cannot click in the middle of the line to edit!!!
  - CTRL-C : cancel current command
 
 **Up/down-arrow** : scroll through command history
+
 **Tab key** : autocomplete / show options
 
 Tab key behavior is different depending on what you have typed:
