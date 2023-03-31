@@ -80,7 +80,7 @@ What it doesn't do:
   - did you mean...? `ehco` instead of `echo`
   - autocomplete/autosuggest non-file arguments
 
-## Task: practice keyboard shortcuts on commands
+### Task: practice keyboard shortcuts on commands
 
 Up-arrow to the commands above (echo, hostname, whoami, pwd) and 
 modify them using the keyboard shortcuts.
