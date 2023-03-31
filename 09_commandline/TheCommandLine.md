@@ -65,13 +65,13 @@ You cannot click in the middle of the line to edit!!!
 **<TAB> key** : autocomplete / show options
 
 ### <TAB> key behavior is different depending on what you have already typed:
- - nothing: asks to display all commands
- - part of a command: 
+ - already typed *nothing*: depends on the shell
+ - already typed *part of a command*: 
    - autocompletes command if only one match
    - possible matches to that command
    - warning if no match
- - argument after command: displays files in current directory
- - partial argument after command:
+ - already typed *a whole command*: displays files in current directory
+ - already typed *partial argument after command*:
    - autocompletes file name if unique match
    - possible matches to the file name
    - warning if no match
