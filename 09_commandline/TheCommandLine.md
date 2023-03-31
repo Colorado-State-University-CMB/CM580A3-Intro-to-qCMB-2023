@@ -106,9 +106,15 @@ SPACES DIVIDE ARGUMENTS
        
 ```
          1      2        3
- % com mand argument1 argument2 
-    
+ % com mand argument1 argument2  
+```
+
+```
+       1      2    3      4
+ % command argum ent1 argument2  
 ```
 
 - arguments can't include spaces "unless you wrap in quotes"
 - command will NEVER include spaces (unless developer is sadistic)
+       
+      
