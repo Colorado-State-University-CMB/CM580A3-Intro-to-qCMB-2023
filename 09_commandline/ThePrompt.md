@@ -82,10 +82,10 @@ What it doesn't do:
 
 ## Task: practice keyboard shortcuts on commands
 
-Up-arrow to the commands above (echo, hostname, whoami, pwd) and execute them (hit enter). 
-
-Up-arrow again and modify them using the keyboard shortcuts.
- - Pare down an echo command to "e" and hot tab to see what commands start with e
+Up-arrow to the commands above (echo, hostname, whoami, pwd) and 
+modify them using the keyboard shortcuts.
+ - Pare down an echo command to "ech" and hit tab. It should expand to "echo" 
+ - try tab completion with "ec", "e" and see what comes up. 
  - Do the same with other commands. What do you get?
 
 ## Anatomy of commands
