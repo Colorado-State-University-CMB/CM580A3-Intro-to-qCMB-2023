@@ -95,7 +95,7 @@ modify them using the keyboard shortcuts.
 
 ### Syntax
        
-( Only showing the prompt separator. Don't type the '%'  )
+( Only showing the prompt separator '%' )
   
 ```
               1         2
