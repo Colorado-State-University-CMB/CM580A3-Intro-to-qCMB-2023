@@ -62,9 +62,9 @@ You cannot click in the middle of the line to edit!!!
 
 **Up/down-arrow** : scroll through command history
 
-**Tab key** : autocomplete / show options
+**<TAB> key** : autocomplete / show options
 
-### Tab key behavior is different depending on what you have typed:
+### <TAB> key behavior is different depending on what you have already typed:
  - nothing: asks to display all commands
  - part of a command: 
    - autocompletes command if only one match
@@ -84,9 +84,11 @@ What it doesn't do:
 
 Up-arrow to the commands above (echo, hostname, whoami, pwd) and 
 modify them using the keyboard shortcuts.
- - Pare down an echo command to "ech" and hit tab. It should expand to "echo" 
- - try tab completion with "ec", "e" and see what comes up. 
- - Do the same with other commands. What do you get?
+ 1. Pare down an echo command to "ech" and hit tab. It should expand to "echo" 
+ 2. try <TAB> completion with "ec", "e" and see what comes up. 
+ 3. Do the same with other commands. What do you get?
+ 4. Try <TAB> with a blank command line. You'll probably have to hit it twice. What is a command with an interesting name?
+ 5. Try that command by adding " -h" to the end. For example, if I see `gcc`, then I will type `gcc -h` with a space between the last 'c' and the '-'.
 
 ## Anatomy of commands
 
