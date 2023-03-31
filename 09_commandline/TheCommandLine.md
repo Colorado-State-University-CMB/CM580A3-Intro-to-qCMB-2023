@@ -92,3 +92,23 @@ modify them using the keyboard shortcuts.
 
 ## Anatomy of commands
 
+
+### Syntax
+       
+( Only showing the prompt separator. Don't type the '%'  )
+  
+```
+              1         2
+% command argument1 argument2                                
+```
+
+SPACES DIVIDE ARGUMENTS
+       
+```
+         1      2        3
+ % com mand argument1 argument2 
+    
+```
+
+- arguments can't include spaces "unless you wrap in quotes"
+- command will NEVER include spaces (unless developer is sadistic)
