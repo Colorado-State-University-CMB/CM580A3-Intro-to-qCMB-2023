@@ -129,8 +129,8 @@ Typically describe:
  - command description
  - see also (other commands) 
 
-Navigating *man* pages: same as `less`
- - `less` is a file reader
+**Navigating *man* pages: same as `less`**
+ - `less` is a file reader (not editor) 
  - up/down arrow keys: scroll line-by-line
  - b, space bar: page up, down
  - G: go to bottom
@@ -139,3 +139,10 @@ Navigating *man* pages: same as `less`
 
 ***Task***: try `man echo`, `man ls`, `man...`
  
+**Search for string:**
+ - search forward: /pattern
+ - search backward: ?pattern
+ - go to next match: n
+ - go to previous match: N
+
+
