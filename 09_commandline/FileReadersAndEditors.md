@@ -43,6 +43,16 @@ Keyboard-only editors are almost completely mouse-independent
    - if it doesn't, use that name as new file 
 
 
+HOMEWORK 1:
+
+Use nano to write yourself a cheatsheet. 
+ - Start by writing the keyboard shortcuts that are displayed on screen
+ - save and quit frequently
+ - choose two commands to write summaries of. 
+ - do so by typing, copy/pasting 
+ - call the file: nano_cheatsheet.txt
+
+### More advanced editor- vi/vim
 
 
 
