@@ -115,6 +115,26 @@ SPACES DIVIDE ARGUMENTS
 ```
 
 - arguments can't include spaces "unless you wrap in quotes"
-- command will NEVER include spaces (unless developer is sadistic)
+- command *should NEVER* include spaces (unless developer is sadistic)
        
-      
+### Find out a command's arguments
+
+ - `command -h`
+ - `command --help`
+ - `man command`
+
+### manpages (manual pages) 
+Typically describe:
+ - arguments
+ - command description
+ - see also (other commands) 
+
+Navigating *man* pages: same as `less`
+ - `less` is a file reader
+ - up/down arrow keys: scroll line-by-line
+ - <space bar>, b: page up, down
+ - G: go to bottom
+ - gg: go to top
+ - q: quit
+
+
