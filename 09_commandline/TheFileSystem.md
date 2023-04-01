@@ -1,8 +1,10 @@
 # Navigating the file system
 
-## Hierarchical Organization
+## Organization
 
-All computers/OSs use a tree-like structure to keep
+### Hierarchical Structure
+
+Computers/OSs favor a tree-like structure to keep
 user files separated from system files.
 
  - user files
@@ -18,3 +20,17 @@ user files separated from system files.
    - Github Desktop
    - RStudio
 
+### Hidden files
+ - Keep out of view, but accessible when needed
+ - Often need to be shown/hidden (ls -a shows "dot files")
+ - Usually contain setup info, configuration data
+
+### File extensions:.doc, .xlsx, .App
+  - "show file extensions" in File Explorer (Windows) or Finder (Mac) 
+  - Naming convention to indicate its format: what program generated the file
+  - Directories usually don't have an extension (just a tendency) 
+  - UNIX/linux program names usually don't have a file extension (double as command name) 
+
+### Graphical file explorers
+
+### Command line *is* a file explorer 
