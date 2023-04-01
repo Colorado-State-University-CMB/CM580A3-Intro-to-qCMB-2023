@@ -25,12 +25,17 @@ user files separated from system files.
  - Often need to be shown/hidden (ls -a shows "dot files")
  - Usually contain setup info, configuration data
 
-### File extensions:.doc, .xlsx, .App
+### File extensions:.doc, .xlsx, .App,.exe
   - "show file extensions" in File Explorer (Windows) or Finder (Mac) 
   - Naming convention to indicate its format: what program generated the file
   - Directories usually don't have an extension (just a tendency) 
   - UNIX/linux program names usually don't have a file extension (double as command name) 
 
 ### Graphical file explorers
+  - Organizes frequently used Folder/Files in a convenient display
+  - May not reflect underlying file/directory structure
+  - Other features (not just showing hidden files) adjustable in settings 
+  - Trade-off between convenience and capability (also protect user) 
+
 
 ### Command line *is* a file explorer 
