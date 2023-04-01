@@ -8,6 +8,7 @@ Computers/OSs favor a tree-like structure to keep
 user files separated from system files.
 
  - user files
+   - Usually in a "home directory" 
    - Can freely read/write/delete
    - Documents, Downloads, Desktop
    - Attached storage (thumb drive, external HD)
@@ -53,8 +54,15 @@ Command-based navigation and exploration.
    - rm (permanently delete a file) 
    - cp (copy a file to a new location or new name)
 
+  - `cd` by itself (with no arguments) : always goes to home directory. 
+  - `cd dirname`: descend into directory `dirname`
+  - `cd ..`: `..` Two dots together means parent directory (above current directory) 
+
+
+
 ### cd-ls-cd-ls-etc
 
 Learn the habit of moving (cd) and looking around (ls). 
+
 
 
