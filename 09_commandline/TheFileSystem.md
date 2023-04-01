@@ -40,12 +40,21 @@ user files separated from system files.
 
 ### Command line *is* a file explorer 
 
- Command-based navigation and exploration.
+Command-based navigation and exploration.
 
- - ls (list: view surroundings)
- - cd (change directory: navigation)
+ - explore/navigate
+   - ls (list: view surroundings)
+   - cd (change directory: navigation)
+   - pwd (print working directory) 
  - manipulate files/directories
    - mkdir (make directory)
    - rmdir (remove empty directory) 
    - mv (move or rename a file or directory) 
    - rm (permanently delete a file) 
+   - cp (copy a file to a new location or new name)
+
+### cd-ls-cd-ls-etc
+
+Learn the habit of moving (cd) and looking around (ls). 
+
+
