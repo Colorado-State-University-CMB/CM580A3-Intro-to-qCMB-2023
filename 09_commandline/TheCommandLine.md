@@ -132,9 +132,10 @@ Typically describe:
 Navigating *man* pages: same as `less`
  - `less` is a file reader
  - up/down arrow keys: scroll line-by-line
- - <space bar>, b: page up, down
+ - b, space bar: page up, down
  - G: go to bottom
  - gg: go to top
  - q: quit
 
-
+***Task***: try `man echo`, `man ls`, `man...`
+ 
