@@ -54,5 +54,36 @@ Use nano to write yourself a cheatsheet.
 
 ### More advanced editor- vi/vim
 
+For more advanced users, complete assignment by learning *vi*. 
+
+Two modes, command mode, edit mode. 
+
+#### vi command mode
+ - select, undo/redo edits, show line numbers
+ - search/replace, delete
+ - enter edit mode:
+   - i/a (input) 
+   - R (replace) 
+   - O (start editing on a new line above cursor) 
+   - o (start editing on a new line below cursor) 
+   - I/A (start editing at beginning of line, end of line) 
+ - precise navigation  
+   - ^ (goto line start) 
+   - $ (goto line end) 
+   - G/gg (same as less) 
+   - w/b (go forward/backward one word) 
+   - ctrl-f/b (page forward, back) 
+   - :linenumber (go directly to line) 
+ - save and quit
+   - :w (save) 
+   - :w filename (save as) 
+   - :wq (save and quit) 
+   - ZZ (save and quit) 
+
+#### vi edit mode
+ - type normally
+ - esc key - leave edit mode
+
+
 
 
