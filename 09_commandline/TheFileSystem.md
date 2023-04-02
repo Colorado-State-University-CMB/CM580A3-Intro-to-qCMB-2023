@@ -106,3 +106,58 @@ Exercise: Make a file/directory model of a grocery store produce section
 %
 ```
 
+My final produce section:
+
+```
+% ls -R produce
+fruits     vegetables
+
+produce/fruits:
+apples citrus
+
+produce/fruits/apples:
+fuji       honeycrisp
+
+produce/fruits/apples/fuji:
+
+produce/fruits/apples/honeycrisp:
+
+produce/fruits/citrus:
+lemons  limes   oranges
+
+produce/fruits/citrus/lemons:
+
+produce/fruits/citrus/limes:
+
+produce/fruits/citrus/oranges:
+
+produce/vegetables:
+cabbage celery  onions
+
+produce/vegetables/cabbage:
+
+produce/vegetables/celery:
+
+produce/vegetables/onions:
+```
+
+If you have the utility `tree` installed, you can do:
+
+```
+produce
+├── fruits
+│   ├── apples
+│   │   ├── fuji
+│   │   └── honeycrisp
+│   └── citrus
+│       ├── lemons
+│       ├── limes
+│       └── oranges
+└── vegetables
+    ├── cabbage
+    ├── celery
+    └── onions
+
+12 directories, 0 files
+
+```
