@@ -59,10 +59,50 @@ Command-based navigation and exploration.
   - `cd ..`: `..` Two dots together means parent directory (above current directory) 
 
 
+### ls: list
+
+ - Mac: https://man.freebsd.org/cgi/man.cgi?ls
+ - Linux: https://man.freebsd.org/cgi/man.cgi?ls
+
+ - ls : list files
+ - ls -l : long list; include file sizes, modification time
+ - ls -a : list *all*; show hidden files ("dot" files)
+ - ls -al : combination of _all_ and _long_
+
 
 ### cd-ls-cd-ls-etc
 
 Learn the habit of moving (cd) and looking around (ls). 
 
+Exercise: Make a file/directory model of a grocery store produce section
 
+```bash
+
+% mkdir produce
+% ls
+% ls -l
+% ls -al
+% cd produce
+% ls
+% mkdir vegetables
+% ls
+% mkdir fruits
+% ls
+# make some fruits
+% cd fruits
+% ls
+% mkdir citrus
+% ls
+% cd citrus
+% mkdir oranges
+% mkdir lemons
+% mkdir limes
+% ls
+% pwd
+# now make some other types of fruit
+% cd ..
+% pwd
+% ls
+%
+```
 
