@@ -1,5 +1,9 @@
 # Setup
 
+ 1. Follow the steps below to get the data.
+ 2. Go to [this link](https://swcarpentry.github.io/shell-novice/03-create/index.html#moving-files-and-directories) to follow along with the lesson that uses these datasets.
+
+
 ## Windows linux subsystem users
 Open a terminal.
 
@@ -18,9 +22,8 @@ cd 09_commandline/sw-carpentry-shell-novice
 ```
 
 ## Mac users
- 1. Update your local repository using "pull" in github desktop. Then navigate to "09_commandline/sw-carpentry-shell-novice
- 2. Go to [this link](https://swcarpentry.github.io/shell-novice/03-create/index.html#moving-files-and-directories) to follow along with the lesson that uses these datasets.
-
+ Update your local repository using "pull" in github desktop. Then navigate to "09_commandline/sw-carpentry-shell-novice in your terminal.
+ 
 
 ## If your prompt is too long (like mine was)
 
