@@ -45,6 +45,10 @@ PS1=" [\u@\h \W]\$ "
 
 You will have to do this every time you open a new shell.
 
-# Go to accompanying Software Carpentry Link
+# Go to accompanying Software Carpentry Lessons
 
  - [moving-files-and-directories](https://swcarpentry.github.io/shell-novice/03-create/index.html#moving-files-and-directories) 
+ - [Pipes and filters](https://swcarpentry.github.io/shell-novice/04-pipefilter/index.html)
+ - [Loops](https://swcarpentry.github.io/shell-novice/05-loop/index.html)
+ - [Scripting](https://swcarpentry.github.io/shell-novice/06-script/index.html)
+ - [Finding things](https://swcarpentry.github.io/shell-novice/07-find/index.html)
