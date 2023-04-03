@@ -8,7 +8,7 @@ Basic. Versatile. Designed for automation.
  - **How?**
 I'll show you. 
  - **When?**
-Right now. (It existed before GUIs). 
+Right now. (Also, it existed before GUIs). 
  - **Who?**
 You: the biologist, analyzer of data, the user of open source. 
  - **Where?**
