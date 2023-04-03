@@ -161,3 +161,13 @@ produce
 12 directories, 0 files
 
 ```
+
+### Task
+
+Choose a concept with nested ideas and make a directory structure. 
+
+Examples: addresses (country, state, city neighborhood) 
+
+Have at least 3 nodes (end-level directories), that don't share the same first parent directory. 
+
+Complete your model by listing it with `ls - R` and pasting that into a new file: model.txt
