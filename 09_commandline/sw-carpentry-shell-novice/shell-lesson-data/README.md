@@ -1,6 +1,5 @@
  1. Update your local repository using "pull" in github desktop. Then navigate to "09_commandline/sw-carpentry-shell-novice
-
-Go to [this link](https://swcarpentry.github.io/shell-novice/03-create/index.html#moving-files-and-directories) to follow along with the lesson that uses these datasets.
+ 2. Go to [this link](https://swcarpentry.github.io/shell-novice/03-create/index.html#moving-files-and-directories) to follow along with the lesson that uses these datasets.
 
 **Zsh people** If your prompt is now too long (like mine was), do the following:
 ```
