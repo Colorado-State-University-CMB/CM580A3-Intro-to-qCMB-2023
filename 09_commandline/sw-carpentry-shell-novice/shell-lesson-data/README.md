@@ -44,3 +44,7 @@ PS1=" [\u@\h \W]\$ "
 ```
 
 You will have to do this every time you open a new shell.
+
+# Go to accompanying Software Carpentry Link
+
+ - [moving-files-and-directories](https://swcarpentry.github.io/shell-novice/03-create/index.html#moving-files-and-directories) 
