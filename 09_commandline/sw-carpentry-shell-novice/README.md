@@ -23,7 +23,8 @@ cd 09_commandline/sw-carpentry-shell-novice/shell-lesson-data
 ```
 
 ## Mac users
- Update your local repository using "pull" in github desktop. Then navigate to "09_commandline/sw-carpentry-shell-novice in your terminal.
+ 1. Update your local repository using "pull" in github desktop. 
+ 2. Then navigate to "09_commandline/sw-carpentry-shell-novice/shell-lesson-data in your terminal.
  
 
 ## If your prompt is too long (like mine was)
