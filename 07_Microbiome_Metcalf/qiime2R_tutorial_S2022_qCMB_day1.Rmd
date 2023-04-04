@@ -148,7 +148,11 @@ kruskal.test(observed_features ~ donor_status, data = metadata)
 
 # If we want to test differences between groups within genotype_and_donor_status (there are four groups in this column), we need to do a pairwise Wilcox test.
 ```{r}
-pairwise.wilcox.test(metadata$observed_features, metadata$genotype_and_donor_status,
+pairwise.wilcox.test(metadata$observed_features,
+                     metadata$genotype_and_donor_status,
+                 p.adjust.method = "BH")
+test.output = pairwise.wilcox.test(metadata$observed_features,
+                                   metadata$genotype_and_donor_status,
                  p.adjust.method = "BH")
 ```
 
@@ -176,6 +180,8 @@ metadata %>%
   xlab("Group") +
   ylab("Faith PD") +
   theme_q2r() # try other themes like theme_bw() or theme_classic()
+
+ggsave("faithPDplot.pdf")
 ```
 
 # Like before, we want to do statistical analyses on our Faith PD measurements between groups.

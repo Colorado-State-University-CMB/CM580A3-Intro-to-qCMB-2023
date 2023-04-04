@@ -55,12 +55,13 @@ bray_curtis$data$Vectors[1:5, 1:3] #for the first 5 samples, position along PC1 
 
 # Make the Bray Curtis PCoA plot by genotype_and_donor_status
 ```{r}
-bray_curtis$data$Vectors %>%
-  select(SampleID, PC1, PC2) %>%
-  left_join(metadata) %>%
+
+bray_curtis$data$Vectors %>% 
+  select(SampleID, PC1, PC2) %>% 
+  left_join(metadata) %>% 
   ggplot(aes(x=PC1, y=PC2, color=`genotype_and_donor_status`)) +
   geom_point() +
-  theme_q2r() +
+  #theme_q2r() +
   scale_color_discrete(name = "Genotype and Donor Status")
 ```
 What kind of trend, or "clustering" do you see?
