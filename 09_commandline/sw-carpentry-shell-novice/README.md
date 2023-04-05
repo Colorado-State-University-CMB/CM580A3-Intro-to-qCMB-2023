@@ -1,7 +1,8 @@
 # Setup
 
  1. Follow the steps below to get the data.
- 2. Go to [this link](https://swcarpentry.github.io/shell-novice/03-create/index.html#moving-files-and-directories) to follow along with the lesson that uses these datasets.
+ 2. Make sure you're in 09_commandline/sw-carpentry-shell-novice/shell-lesson-data to sync up with the lesson below.
+ 3. Go to [this link](https://swcarpentry.github.io/shell-novice/03-create/index.html#creating-directories) to follow along with the lesson that uses these datasets.
 
 
 ## Windows linux subsystem users
@@ -9,7 +10,7 @@ Open a terminal.
 
 ```
 git clone https://github.com/Colorado-State-University-CMB/CM580A3-Intro-to-qCMB-2023.git
-cd 09_commandline/sw-carpentry-shell-novice
+cd 09_commandline/sw-carpentry-shell-novice/shell-lesson-data
 ```
 
 
@@ -18,11 +19,12 @@ cd 09_commandline/sw-carpentry-shell-novice
 ```
 cd /projects/$USER
 git clone https://github.com/Colorado-State-University-CMB/CM580A3-Intro-to-qCMB-2023.git
-cd 09_commandline/sw-carpentry-shell-novice
+cd 09_commandline/sw-carpentry-shell-novice/shell-lesson-data
 ```
 
 ## Mac users
- Update your local repository using "pull" in github desktop. Then navigate to "09_commandline/sw-carpentry-shell-novice in your terminal.
+ 1. Update your local repository using "pull" in github desktop. 
+ 2. Then navigate to "09_commandline/sw-carpentry-shell-novice/shell-lesson-data in your terminal.
  
 
 ## If your prompt is too long (like mine was)
@@ -47,7 +49,7 @@ You will have to do this every time you open a new shell.
 
 # Go to accompanying Software Carpentry Lessons
 
- - [moving-files-and-directories](https://swcarpentry.github.io/shell-novice/03-create/index.html#moving-files-and-directories) 
+ - [Creating directories](https://swcarpentry.github.io/shell-novice/03-create/index.html#creating-directories) 
  - [Pipes and filters](https://swcarpentry.github.io/shell-novice/04-pipefilter/index.html)
  - [Loops](https://swcarpentry.github.io/shell-novice/05-loop/index.html)
  - [Scripting](https://swcarpentry.github.io/shell-novice/06-script/index.html)
