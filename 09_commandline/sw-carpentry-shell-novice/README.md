@@ -1,7 +1,7 @@
 # Setup
 
  1. Follow the steps below to get the data.
- 2. Make sure you're in `09_commandline/sw-carpentry-shell-novice/shell-data` to sync up with the lesson below.
+ 2. Make sure you're in `09_commandline/sw-carpentry-shell-novice/shell_data` to sync up with the lesson below.
  3. Go to [this link](https://datacarpentry.org/shell-genomics/03-working-with-files/index.html) to follow along with the lesson that uses these datasets.
 
 
