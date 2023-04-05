@@ -2,7 +2,7 @@
 
  1. Follow the steps below to get the data.
  2. Make sure you're in 09_commandline/sw-carpentry-shell-novice/shell-lesson-data to sync up with the lesson below.
- 3. Go to [this link](https://swcarpentry.github.io/shell-novice/03-create/index.html#creating-directories) to follow along with the lesson that uses these datasets.
+ 3. Go to [this link](https://datacarpentry.org/shell-genomics/03-working-with-files/index.html) to follow along with the lesson that uses these datasets.
 
 
 ## Windows linux subsystem users
@@ -10,7 +10,7 @@ Open a terminal.
 
 ```
 git clone https://github.com/Colorado-State-University-CMB/CM580A3-Intro-to-qCMB-2023.git
-cd 09_commandline/sw-carpentry-shell-novice/shell-lesson-data
+cd 09_commandline/sw-carpentry-shell-novice/shell-data
 ```
 
 
@@ -19,12 +19,12 @@ cd 09_commandline/sw-carpentry-shell-novice/shell-lesson-data
 ```
 cd /projects/$USER
 git clone https://github.com/Colorado-State-University-CMB/CM580A3-Intro-to-qCMB-2023.git
-cd 09_commandline/sw-carpentry-shell-novice/shell-lesson-data
+cd 09_commandline/sw-carpentry-shell-novice/shell-data
 ```
 
 ## Mac users
  1. Update your local repository using "pull" in github desktop. 
- 2. Then navigate to "09_commandline/sw-carpentry-shell-novice/shell-lesson-data in your terminal.
+ 2. Then navigate to "09_commandline/sw-carpentry-shell-novice/shell-data in your terminal.
  
 
 ## If your prompt is too long (like mine was)
