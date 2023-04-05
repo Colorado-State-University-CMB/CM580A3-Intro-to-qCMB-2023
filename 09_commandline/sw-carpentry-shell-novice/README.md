@@ -47,7 +47,17 @@ PS1=" [\u@\h \W]\$ "
 
 You will have to do this every time you open a new shell.
 
-# Go to accompanying Software Carpentry Lessons
+# Data carpentry Shell genomics
+
+Data directory: `09_commandline/sw-carpentry-shell-novice/shell-data`
+
+ - [Working with files](https://datacarpentry.org/shell-genomics/03-working-with-files/index.html)
+ - [Redirection](https://datacarpentry.org/shell-genomics/04-redirection/index.html)
+ - [Scripting](https://datacarpentry.org/shell-genomics/05-writing-scripts/index.html)
+
+# For more practice, go to accompanying Software Carpentry Lessons
+
+Data directory: `09_commandline/sw-carpentry-shell-novice/shell-lesson-data`
 
  - [Creating directories](https://swcarpentry.github.io/shell-novice/03-create/index.html#creating-directories) 
  - [Pipes and filters](https://swcarpentry.github.io/shell-novice/04-pipefilter/index.html)
