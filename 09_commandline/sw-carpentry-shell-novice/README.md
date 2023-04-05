@@ -10,7 +10,7 @@ Open a terminal.
 
 ```
 git clone https://github.com/Colorado-State-University-CMB/CM580A3-Intro-to-qCMB-2023.git
-cd 09_commandline/sw-carpentry-shell-novice/shell-data
+cd 09_commandline/sw-carpentry-shell-novice/shell_data
 ```
 
 
@@ -19,12 +19,12 @@ cd 09_commandline/sw-carpentry-shell-novice/shell-data
 ```
 cd /projects/$USER
 git clone https://github.com/Colorado-State-University-CMB/CM580A3-Intro-to-qCMB-2023.git
-cd 09_commandline/sw-carpentry-shell-novice/shell-data
+cd 09_commandline/sw-carpentry-shell-novice/shell_data
 ```
 
 ## Mac users
  1. Update your local repository using "pull" in github desktop. 
- 2. Then navigate to "09_commandline/sw-carpentry-shell-novice/shell-data in your terminal.
+ 2. Then navigate to "09_commandline/sw-carpentry-shell-novice/shell_data in your terminal.
  
 
 ## If your prompt is too long (like mine was)
