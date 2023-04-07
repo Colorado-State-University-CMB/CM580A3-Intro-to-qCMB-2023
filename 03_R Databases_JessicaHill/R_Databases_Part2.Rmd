@@ -6,14 +6,17 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
+
 knitr::opts_chunk$set(echo = TRUE, error = TRUE, warning = FALSE)
+
 ```
+
 ---
 
 ```{r}
 getwd() # find our current working directory 
 
-setwd("/Users/jessicahill/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class") # set the directory we want as our current working directory 
+#setwd("/Users/jessicahill/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class") # set the directory we want as our current working directory 
 ```
 
 ---
@@ -36,7 +39,8 @@ As biological data accumulate at larger scales and increase at exponential paces
 * proteins --> proteomics assays 
 * small molecules --> metabolomics assays 
 
-```{r echo=FALSE, out.width = "90%", fig.align = "center"}
+```{r imager, echo=FALSE, out.width = "90%", fig.align = "center"}
+
 #install.packages("imager")
 library(imager)
 

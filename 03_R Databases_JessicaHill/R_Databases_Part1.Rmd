@@ -23,7 +23,7 @@ This will make it easier for us to point to files during the lesson.
 ```{r}
 getwd() # find our current working directory 
 
-setwd("/Users/jessicahill/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class") # set the directory we want as our current working directory 
+#setwd("/Users/jessicahill/Library/CloudStorage/OneDrive-Colostate/JESSICA/CSU/BMB/ONISH_LAB/PROJECTS/PROGRAMMING/Intro_qCMB_class/2023_qCMB_class") # set the directory we want as our current working directory 
 ```
 
 *** 
