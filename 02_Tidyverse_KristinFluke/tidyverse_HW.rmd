@@ -181,11 +181,10 @@ regulation <- function(log2fc, pval){
 
 
 # Start here. build up the dataframe layer-by-layer using piping. 
-# Don't uncomment the code until the instructions tell you to. 
+# Don't uncomment the code until the instructions tell you to.
 
-DGE_df2 <- data
-
-  #mutate(expo_RPKM_rep1 = expo_rep1 / (length / 1000)  / expo1_MMR   )
+data %>% merge(gene_lengths, all.x = TRUE) %>% 
+  mutate(expo_RPKM_rep1 = expo_rep1 / (length / 1000)  / expo1_MMR   )
  
 
   #rowwise() %>%
