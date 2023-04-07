@@ -89,16 +89,20 @@ The dataset has already been loaded for you. Run the code chunk bellow and answe
 
 data("iris")
 
+iris
 
-iris_df <- iris  %>%
+iris_df <- 
+  iris  %>%
   gather(key="part_and_dimension", value="measurement", 1:4) %>%
   separate(col=part_and_dimension, into=c("part", "dimension")) %>%
-  group_by(Species, part, dimension) %>% # no quotes around column names
-  summarize(mean_measurement = mean(measurement)) %>%
+   group_by(Species, part, dimension) %>% # no quotes around column names
+   summarize(mean_measurement = mean(measurement)) 
+
+iris_df_means = iris_df %>%
   spread(key = "dimension",  value = "mean_measurement")
 
-
 iris_df
+iris_df_means
 
 ```
 
