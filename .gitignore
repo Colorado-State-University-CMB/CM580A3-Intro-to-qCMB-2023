@@ -9,3 +9,19 @@
 *.Rproj
 09_commandline/sw-carpentry-shell-novice/shell-lesson-data/exercise-data/alkanes/lengths.txt
 07_Microbiome_Metcalf/faithPDplot.pdf
+02_Tidyverse_KristinFluke/DGE_analysis.tsv
+02_Tidyverse_KristinFluke/tidyverse_HW.html
+*.eps
+*.tex
+03_R Databases_JessicaHill/PLOS template/PLOS-template.pdf
+05_RMarkdown_BrookeAnderson/cfu_data.csv
+05_RMarkdown_BrookeAnderson/part1.R
+07_Microbiome_Metcalf/qCMB_580A3.zip
+07_Microbiome_Metcalf/qCMB_580A3_data.zip
+03_R Databases_JessicaHill/Example_Data/save_HNP_Stats.xlsx
+03_R Databases_JessicaHill/Example_Data/US_Accidents.csv
+03_R Databases_JessicaHill/Example_Data/US_Accidents.csv.zip
+03_R Databases_JessicaHill/PLOS template/mybibfile.bib
+03_R Databases_JessicaHill/PLOS template/PLOS template.Rmd
+03_R Databases_JessicaHill/Troy_Homework_3_Actual_Working.rmd
+*.html
