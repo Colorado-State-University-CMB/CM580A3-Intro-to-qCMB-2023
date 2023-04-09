@@ -21,6 +21,10 @@ After stashing:
 
 ![Github Desktop view after stashing](../img/github_desktop_view_after_stash.png)
 
+You'll now be able to pull as long as you ***don't make any more changes***
+
+See [this link](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/stashing-changes) for another illustration of stashing.
+
 #### 2. Make a copy and revert the conflicted file
   - Copy your file, change/add to the filename
   - Revert conflicted file (Discard Changes)
