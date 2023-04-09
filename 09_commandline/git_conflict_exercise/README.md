@@ -11,8 +11,12 @@ In the context of this class, it is caused by:
 
 ### Solutions
 
-#### 1. Make a copy and revert the conflicted file
+#### 1. Stash changes and pull (temporary)
+  - Follow Github Desktop's prompt to `stash changes and continue`
+  - It will pull, but you'll have to deal with the stash later
+
+#### 2. Make a copy and revert the conflicted file
   - Copy your file, change/add to the filename
-  - Revert conflicted file (downloads changes from repo)
+  - Revert conflicted file (Discard Changes)
 
  
