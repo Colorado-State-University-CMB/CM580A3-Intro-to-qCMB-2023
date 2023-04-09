@@ -14,6 +14,12 @@ In the context of this class, it is caused by:
 #### 1. Stash changes and pull (temporary)
   - Follow Github Desktop's prompt to `stash changes and continue`
   - It will pull, but you'll have to deal with the stash later
+  
+![Github Desktop stash dialogue box](../img/github_desktop_prompt_stash.png)
+
+After stashing:
+
+![Github Desktop view after stashing](../img/github_desktop_view_after_stash.png)
 
 #### 2. Make a copy and revert the conflicted file
   - Copy your file, change/add to the filename
