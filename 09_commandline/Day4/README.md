@@ -14,3 +14,8 @@ Mac: Go to Github Desktop, go to "Repository" -> "Open in Terminal"
 
 Windows WSL: You have to `cd` to where you cloned the repo, it should be a directory called `CM580A3-Intro-to-qCMB-2023`
 
+## Terminus: A fun exploration game
+
+http://web.mit.edu/mprat/Public/web/Terminus/Web/main.html 
+
+
