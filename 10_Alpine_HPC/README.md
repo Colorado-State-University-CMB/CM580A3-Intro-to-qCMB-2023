@@ -32,5 +32,16 @@ Alpine is the University of Colorado Boulder Research Computing’s third-genera
     - command line only
     - need password,push DUO every time 
 
+## Directory organization and space
+
+ - home directory: /home/$USER - 5Gb
+ - project directory: /projects/$USER - 250Gb
+ - scratch directory: /scratch/alpine/$USER - 1Tb (**FILES DELETED AFTER 90 DAYS**) 
+
+ - Config files go in home directory. 
+ - Workflows, code, important data files go in project directory. 
+ - Temporary data files go in scratch directory
+
+IF YOU FILL UP YOUR HOME DIRECTORY, YOUR ACCOUNT MAY BECOME UNUSABLE
 
 
