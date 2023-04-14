@@ -11,7 +11,7 @@ Alpine is the University of Colorado Boulder Research Computing’s third-genera
    - High memory jobs can request almost 1 Tb 
  - Can run multiple jobs in parallel
  - Free up your own computer 
- - Don't need to be logged
+ - Don't need to be logged in
 
 
 
