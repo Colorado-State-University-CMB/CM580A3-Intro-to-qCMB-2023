@@ -21,11 +21,11 @@ Alpine is the University of Colorado Boulder Research Computing’s third-genera
 ## Two ways to log on
 
  1. https://ondemand-rmacc.rc.colorado.edu/
-   - operates through tabs in web browser
-   - graphical file browser, with upload/download optiond
-   - file editor and terminal windows
+    - operates through tabs in web browser
+    - graphical file browser, with upload/download optiond
+    - file editor and terminal windows
  2. ssh from your terminal
-   - sometimes it works better
-   - sometimes it's the only way to get on the system
-   - command line only
+    - sometimes it works better
+    - sometimes it's the only way to get on the system
+    - command line only
 
