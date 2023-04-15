@@ -13,7 +13,7 @@ Alpine is the University of Colorado Boulder Research Computing’s third-genera
  - Free up your own computer 
  - Don't need to be logged in
 
-** What for? **
+**What for?**
 
  - Next-gen sequence analysis
  - Large-scale modeling (deep learning)
