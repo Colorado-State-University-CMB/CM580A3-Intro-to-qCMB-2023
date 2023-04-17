@@ -13,15 +13,15 @@ conda config --add channels bioconda
 
 
 # create special rc for the class's slurm users
-SPECIAL_RC=.CM580A3.rc
+SPECIAL_RC=~/.CM580A3.rc
 
 echo 'source /curc/sw/anaconda3/latest' > $SPECIAL_RC
 echo "alias sa='sacct -X --format JobID,JobName,AllocCPUS,State,ExitCode,Elapsed,TimeLimit,Submit,Start,End'" >> $SPECIAL_RC
 echo "alias sq='squeue -u $USER'" >> $SPECIAL_RC
 
-echo '# >>>>>>> CM580A3_Alpine_setup.sh' >> .bashrc
-echo "source $SPECIAL_RC" >> .bashrc
-echo '# <<<<<<< CM580A3_Alpine_setup.sh' >> .bashrc
+echo '# >>>>>>> CM580A3_Alpine_setup.sh' >> ~/.bashrc
+echo "source $SPECIAL_RC" >> ~/.bashrc
+echo '# <<<<<<< CM580A3_Alpine_setup.sh' >> ~/.bashrc
 
 
 
