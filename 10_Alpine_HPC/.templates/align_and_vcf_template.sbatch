@@ -28,18 +28,22 @@ echo -n "Starting... "
 date
 echo "------------------------------------------------------------------"
 
-### Download data 
-### You must comment out these lines after the first time you run it.
-echo -n "DOWNLOAD GENOME: "
-mkdir -p $GENOME_DIR
-echo "downloading..."
-curl -L -o $GENOME_DIR/$GENOME_FILE.gz $GENOME_URL
-gunzip $GENOME_DIR/$GENOME_FILE.gz
-
-### Create indexes 
-### You must comment out these lines after the first time you run it.
-echo -n "INDEXING GENOME... "
-bwa index $GENOME_DIR/$GENOME_FILE
+### Download data ########################################################################################
+### You must comment out lines in this box after the first time you run it. ##############################
+echo -n "DOWNLOAD GENOME: "                                                                             #
+mkdir -p $GENOME_DIR                                                                                    #
+echo "downloading..."                                                                                   #
+curl -L -o $GENOME_DIR/$GENOME_FILE.gz $GENOME_URL                                                      #
+gunzip $GENOME_DIR/$GENOME_FILE.gz                                                                      #
+                                                                                                        #
+### Create indexes                                                                                      #
+### You must comment out these lines after the first time you run it.                                   #
+echo -n "INDEXING GENOME... "                                                                           #
+bwa index $GENOME_DIR/$GENOME_FILE                                                                      #
+                                                                                                        #
+exit                                                                                                    #
+### end of download/index portion. Comment out (put a '#' at the beginning of each line ##################
+##########################################################################################################
 
 
 # Alignment
